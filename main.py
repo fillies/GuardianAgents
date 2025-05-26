@@ -3,6 +3,27 @@ import json
 import re
 import discord
 from dotenv import load_dotenv
+import aiohttp
+from fastapi import FastAPI, Request
+import uvicorn
+from threading import Thread
+
+from fastapi import BackgroundTasks
+from pydantic import BaseModel
+from typing import List, Dict
+import asyncio
+
+class NewRulesInput(BaseModel):
+    message_id: str
+    region: str
+    rules: List[str]
+
+
+class ModerationInput(BaseModel):
+    message_id: str
+    region: str
+    legal_violation: Dict[str, List[str]]
+    laws_violated: List[str]
 
 # Load environment variables
 load_dotenv()
@@ -13,6 +34,36 @@ CHAT_CHANNEL_ID = int(os.getenv('CHAT_CHANNEL_ID'))
 
 # Persistent user data store
 USER_DATA_FILE = "user_data.json"
+
+app = FastAPI()
+
+
+
+@app.post("/new-moderation-decision")
+async def receive_contetn_moderation(data: ModerationInput):
+    asyncio.run_coroutine_threadsafe(
+        process_legal_violation(data.model_dump()), client.loop
+    )
+    return {"status": "received"}
+
+
+@app.post("/new-rules")
+async def receive_new_rules(data: NewRulesInput):
+    # Schedule send_dm_to_admin properly in the Discord event loop
+    asyncio.run_coroutine_threadsafe(
+        send_dm_to_admin(data.message_id, data.region, data.rules),
+        client.loop
+    )
+
+    print("📜 Received new rules update:")
+    print(f"Message ID: {data.message_id}")
+    print(f"Region: {data.region}")
+    print("Rules:")
+    for rule in data.rules:
+        print(f" - {rule}")
+
+    return {"status": "rules received and admin notified"}
+
 
 # Load user data from file
 if os.path.exists(USER_DATA_FILE):
@@ -63,21 +114,39 @@ async def on_message(message):
 
     if message.channel.id == CHAT_CHANNEL_ID:
         author_id = str(message.author.id)
-        print(message)
         if author_id in user_data:
             country = user_data[author_id].get("country", "Unknown")
         else:
             country = "Unknown"
 
-        print("Country: "+ country)
-        print("Message ID: " + str(message.id))
-        print("Message: "+ str( message.content))
-        #make call to langflow with country message.id and content
-        #await message.channel.send(f"{message.author.display_name} is from {country}")
+        message_id = str(message.id)
+        message_content = message.content
+
+        print("Country: " + country)
+        print("Message ID: " + message_id)
+        print("Message: " + message_content)
+
+        # ✅ Make the API call
+        async with aiohttp.ClientSession() as session:
+            webhook_url = "http://81.169.159.230:7860/api/v1/webhook/36fc0797-c562-4940-aabd-25e0aa164f2a"
+            payload = {
+                "message_id": message_id,
+                "location": country,
+                "message": message_content
+            }
+
+            try:
+                async with session.post(webhook_url, json=payload) as response:
+                    if response.status == 200:
+                        print("Successfully sent message to Langflow webhook.")
+                    else:
+                        print(f"Webhook call failed with status {response.status}")
+            except Exception as e:
+                print(f"Error calling webhook: {e}")
 
         if 'hi' in message.content.lower():
             await message.channel.send('Hi')
-        await message.channel.send("Currently no moderation is in place")
+        await message.channel.send("Currently  there is content moderation in place")
 
     if message.channel.id == INTRO_CHANNEL_ID:
         member = message.author
@@ -112,5 +181,72 @@ async def on_message(message):
             await message.channel.send(
                 f"{member.mention}, please use the correct format: `Name: Jan, Country: Germany, Age: 10`"
             )
+
+async def send_dm_to_admin(message_id, country, rules):
+    await client.wait_until_ready()  # Ensure the bot is connected
+    admin_id = int(os.getenv("DISCORD_ADMIN_ID"))
+    admin_user = await client.fetch_user(admin_id)
+
+    if admin_user:
+        rule_text = "\n".join([f"- {r}" for r in rules])
+        dm_message = (
+            f"📢 **New Rules Received**\n"
+            f"**Message ID**: {message_id}\n"
+            f"**Country**: {country}\n"
+            f"**Rules:**\n{rule_text}"
+        )
+        try:
+            await admin_user.send(dm_message)
+            print("✅ DM sent to admin.")
+        except Exception as e:
+            print(f"❌ Failed to send DM to admin: {e}")
+    else:
+        print("❌ Admin user not found.")
+
+async def process_legal_violation(data):
+    await client.wait_until_ready()
+
+    message_id = int(data.get("message_id"))
+    region = data.get("region", "Unknown")
+    legal_violation = data.get("legal_violation", {})
+    laws_violated = data.get("laws_violated", [])
+
+    if not legal_violation:
+        print(f"✅ No legal violations. Message {message_id} not deleted.")
+        return
+
+    try:
+        channel = client.get_channel(CHAT_CHANNEL_ID)
+        message = await channel.fetch_message(message_id)
+        await message.delete()
+        print(f"🗑️ Deleted message {message_id} due to legal violations.")
+
+        # Construct human-readable reason
+        violations = []
+        for category, details in legal_violation.items():
+            for item in details:
+                violations.append(f"{category.replace('_', ' ').title()}: {item.replace('_', ' ').title()}")
+
+        law_text = "\n".join([f"🔹 {law}" for law in laws_violated])
+        reasons = "\n".join([f"• {v}" for v in violations])
+
+        warning_message = (
+            f"🚨 A message was removed due to legal concerns in **{region.title()}**.\n"
+            f"**Violations:**\n{reasons}\n\n"
+            f"**Laws Violated:**\n{law_text}"
+        )
+
+        await channel.send(warning_message)
+
+    except Exception as e:
+        print(f"❌ Failed to process legal violation: {e}")
+
+
+def run_api():
+    uvicorn.run(app, host="0.0.0.0", port=8082)
+
+# Run FastAPI in a separate thread
+api_thread = Thread(target=run_api, daemon=True)
+api_thread.start()
 
 client.run(TOKEN)
