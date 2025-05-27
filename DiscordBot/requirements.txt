@@ -1,4 +1,7 @@
-discord
-python-dotenv
 fastapi
 uvicorn
+discord.py
+aiohttp
+python-dotenv
+pydantic
+nest_asyncio

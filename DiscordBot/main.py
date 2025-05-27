@@ -12,6 +12,7 @@ from fastapi import BackgroundTasks
 from pydantic import BaseModel
 from typing import List, Dict
 import asyncio
+import nest_asyncio
 
 class NewRulesInput(BaseModel):
     message_id: str
@@ -242,11 +243,17 @@ async def process_legal_violation(data):
         print(f"❌ Failed to process legal violation: {e}")
 
 
-def run_api():
-    uvicorn.run(app, host="0.0.0.0", port=8082)
+async def start_fastapi():
+    config = uvicorn.Config(app, host="0.0.0.0", port=8082, log_level="info")
+    server = uvicorn.Server(config)
+    await server.serve()
 
-# Run FastAPI in a separate thread
-api_thread = Thread(target=run_api, daemon=True)
-api_thread.start()
+async def main():
+    # Start FastAPI as background task
+    asyncio.create_task(start_fastapi())
+    # Start Discord bot
+    await client.start(TOKEN)
 
-client.run(TOKEN)
+if __name__ == "__main__":
+    nest_asyncio.apply()  # Patch asyncio so Discord + FastAPI can coexist
+    asyncio.run(main())
