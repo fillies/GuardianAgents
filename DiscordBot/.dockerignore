@@ -3,4 +3,4 @@ __pycache__/
 *.pyo
 *.pyd
 .env
-user_data.json
+DiscordBot/user_data.json

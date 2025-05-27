@@ -20,7 +20,7 @@ The bot connects to the Discord server **GuardianAgentsDemo** ([join here](https
 
 ```bash
 git clone https://github.com/yourusername/GuardianAgents.git
-cd GuardianAgents
+cd GuardianAgents/DiscordBot
 ```
 
 ## 🚀 Getting Started
