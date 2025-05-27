@@ -47,5 +47,5 @@ docker build -t guardian-bot .
 ### 4. Run the Container
 
 ```bash
-docker run --env-file .env -v $(pwd)/user_data.json:/app/user_data.json guardian-bot
+docker run -d -p 8082:8082 --name guardian-bot --env-file .env guardian-bot
 ```
