@@ -1,0 +1,33 @@
+:- eval(ethicalChecker()).
+
+ethicalChecker() :-
+    rcvMult(X,P,F,complianceRequest,[Cat1,ListSubCat1,Region]),
+    element(SubCat1,ListSubCat1),
+    isUnethical(Cat1,SubCat1),
+    spawn(X,$Service,updateResponse,[X,"ethical_violation",Cat1,SubCat1,Cat1,Region]),
+    spawn(X,$Service,resume,[]).
+
+
+isUnethical(sexual_or_obscene,explicit_minor).
+isUnethical(sexual_or_obscene,nonconsensual).
+isUnethical(coercion_or_grooming,manipulation).
+isUnethical(coercion_or_grooming,emotional_blackmail).
+isUnethical(coercion_or_grooming,normalization).
+isUnethical(harassment,deepfake_impersonation).
+isUnethical(self_harm,promotion).
+isUnethical(public_safety,school_targeting).
+isUnethical(violence_or_threats,direct_threat).
+isUnethical(hate_speech,dehumanization).
+isUnethical(hate_speech,religion).
+isUnethical(hate_speech,ethnicity).
+isUnethical(hate_speech,nationality).
+isUnethical(hate_speech,gender).
+isUnethical(hate_speech,sexual_orientation).
+isUnethical(hate_speech,age).
+isUnethical(hate_speech,disability).
+isUnethical(hate_speech,socioeconomic_class).
+isUnethical(hate_speech,holocaust_denial).
+isUnethical(hate_speech,extremist_symbols).
+isUnethical(hate_speech,religious_mockery).
+isUnethical(hate_speech,misgendering).
+isUnethical(hate_speech,mocking_disability).

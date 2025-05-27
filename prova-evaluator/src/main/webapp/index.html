@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prova Evaluator</title>
+    <style>
+        textarea {
+            resize: none;
+        }
+        table {
+            border-spacing: 10px;
+        }
+    </style>
+    <script>
+        const endpoint = 'legalcheck'; // Change to your actual endpoint
+
+        async function handleGet() {
+            const location = document.getElementById('get-left').value.trim();
+            try {
+                const response = await fetch(`${endpoint}?location=${encodeURIComponent(location)}`);
+                document.getElementById('get-right').value = await response.text();
+            } catch (err) {
+                document.getElementById('get-right').value = 'Error: ' + err;
+            }
+        }
+
+        async function handlePut() {
+            const body = document.getElementById('put-left').value.trim();
+            try {
+                const response = await fetch(endpoint, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: body
+                });
+                if (response.ok) {
+                    document.getElementById('put-right').value = '200 OK';
+                } else {
+                    document.getElementById('put-right').value = `Error: ${response.status} ${response.statusText}`;
+                }
+            } catch (err) {
+                document.getElementById('put-right').value = 'Error: ' + err;
+            }
+        }
+
+        async function handlePost() {
+            const body = document.getElementById('post-left').value.trim();
+            try {
+                const response = await fetch(endpoint, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: body
+                });
+
+                const text = await response.text();
+
+                try {
+                    const json = JSON.parse(text);
+                    document.getElementById('post-right').value = JSON.stringify(json, null, 2);
+                } catch (e) {
+                    document.getElementById('post-right').value = 'Invalid JSON response:\n' + text;
+                }
+            } catch (err) {
+                document.getElementById('post-right').value = 'Error: ' + err;
+            }
+        }
+    </script>
+</head>
+<body>
+<h1>API Tester</h1>
+<table>
+    <tr>
+        <td><label for="get-left">Location</label></td>
+        <td></td>
+        <td><label for="get-right">Result</label></td>
+    </tr>
+
+    <tr>
+        <td>
+            <textarea id="get-left" rows="1" cols="50" placeholder="Country (GET)"></textarea>
+        </td>
+        <td>
+            <button onclick="handleGet()">GET</button>
+        </td>
+        <td>
+            <textarea id="get-right" rows="1" cols="50" placeholder="Result" readonly></textarea>
+        </td>
+    </tr>
+
+    <tr>
+        <td><label for="put-left">Assertions</label></td>
+        <td></td>
+        <td><label for="put-right">Result</label></td>
+    </tr>
+    <tr>
+        <td>
+            <textarea id="put-left" rows="20" cols="50" placeholder='JSON (PUT)'></textarea>
+        </td>
+        <td>
+            <button onclick="handlePut()">PUT</button>
+        </td>
+        <td>
+            <textarea id="put-right" rows="20" cols="50" placeholder="Status" readonly></textarea>
+        </td>
+    </tr>
+
+    <tr>
+        <td><label for="post-left">Queries</label></td>
+        <td></td>
+        <td><label for="post-right">Result</label></td>
+    </tr>
+
+    <tr>
+        <td>
+            <textarea id="post-left" rows="35" cols="50" placeholder='JSON (POST)'></textarea>
+        </td>
+        <td>
+            <button onclick="handlePost()">POST</button>
+        </td>
+        <td>
+            <textarea id="post-right" rows="35" cols="50" placeholder="Formatted JSON Result" readonly></textarea>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

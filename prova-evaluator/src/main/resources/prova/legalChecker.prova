@@ -1,0 +1,71 @@
+:- eval(legalChecker()).
+
+not_equal(A,B) :-
+    A <> B.
+
+equal(A,B) :-
+    not(not_equal(A,B)).
+
+not(A) :-
+        derive(A),
+        !,
+        fail().
+not(_).
+
+legalChecker() :- % this is the combination checker
+    rcvMult(X,P,F,complianceRequest,[Cat1,ListSubCat1,Cat2,ListSubCat2,Region]),
+    element(SubCat1,ListSubCat1),
+    isIllegal(Cat1,SubCat1,CatGround,SubCatGround,Region,Law),
+    bound(CatGround),
+    equal(CatGround,Cat2),
+    bound(SubCatGround),
+    element(SubCat2,ListSubCat2),
+    equal(SubCatGround,SubCat2),
+    spawn(X,$Service,updateResponse,[X,"legal_violation",Cat1,SubCat1,Law,Region]),
+    spawn(X,$Service,updateResponse,[X,"legal_violation",Cat2,SubCat2,Law,Region]),
+    spawn(X,$Service,resume,[]).
+
+
+legalChecker() :-
+    rcvMult(X,P,F,complianceRequest,[Cat,ListSubCat,Region]),
+    illegalOrCombination(X,Cat,ListSubCat,Region,Law),
+    spawn(X,$Service,resume,[]).
+
+
+legalChecker() :-
+    rcvMult(X,P,F,complianceRequest,[Cat,ListSubCat,Region]),
+    not(illegalOrCombination(X,Cat,ListSubCat,Region,Law)),
+    spawn(X,$Service,resume,[]).
+
+
+illegalOrCombination(X,Cat1,ListSubCat1,Region,Law) :-
+    element(SubCat1,ListSubCat1),
+    isIllegal(Cat1,SubCat1,Cat2,SubCat2,Region,Law),
+    bound(Cat2), % not a simple rule
+    spawn(X,$Service,triggerHasComplexRules,[]). % void triggerHasComplexRules() {hasComplexRules = true;}
+
+
+illegalOrCombination(X,Cat1,ListSubCat1,Region,Law) :-
+    element(SubCat1,ListSubCat1),
+    isIllegal(Cat1,SubCat1,Cat2,SubCat2,Region,Law),
+    free(Cat2), % simple rule
+    spawn(X,$Service,updateResponse,[X,"legal_violation",Cat1,SubCat1,Law,Region]).
+
+
+legalChecker() :-
+    rcvMult(X,P,F,informRequest,{hasRegion->Region}) [not(assertedRegion(Region))],
+    spawn(X,$Service,setHasRegionData,[Region,"false"]),
+    spawn(X,$Service,resume,[]).
+
+
+legalChecker() :-
+    rcvMult(X,P,F,informRequest,{hasRegion->Region}) [assertedRegion(Region)],
+    spawn(X,$Service,setHasRegionData,[Region,"true"]),
+    spawn(X,$Service,resume,[]).
+
+
+legalChecker() :-
+    rcvMult(X,P,F,updateRequest,{region->Region,newRules->Buffer}),
+    consult(Buffer),
+    assert(assertedRegion(Region)),
+    spawn(X,$Service,resume,[]).

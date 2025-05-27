@@ -1,0 +1,107 @@
+{
+  "type": "object",
+  "properties": {
+    "message_id": { "type": "string" },
+    "region" : { "type": "string" },
+    "content": { "type": "string" },
+    "tags": {
+      "type": "object",
+      "properties": {
+        "hate_speech": {
+          "type": "array",
+          "items": { "type": "string", "enum": [
+            "dehumanization",
+            "religion",
+            "ethnicity",
+            "nationality",
+            "gender",
+            "sexual_orientation",
+            "age",
+            "disability",
+            "socioeconomic_class",
+            "holocaust_denial",
+            "extremist_symbols",
+            "religious_mockery",
+            "misgendering"
+          ]}
+        },
+        "violence_or_threats": {
+          "type": "array",
+          "items": { "type": "string", "enum": [
+            "direct_threat",
+            "call_for_violence",
+            "incitement",
+            "glorification_of_violence",
+            "doxxing",
+            "stochastic_terrorism"
+          ]}
+        },
+        "public_safety": {
+          "type": "array",
+          "items": { "type": "string", "enum": [
+            "dangerous_conspiracy",
+            "panic_inducing_claims",
+            "disobedience_encouragement"
+          ]}
+        },
+        "sexual_or_obscene": {
+          "type": "array",
+          "items": { "type": "string", "enum": [
+            "explicit_minor",
+            "nonconsensual",
+            "sexual_harassment",
+            "offensive_language"
+          ]}
+        },
+        "legal_or_policy_violation": {
+          "type": "array",
+          "items": { "type": "string", "enum": [
+            "copyright",
+            "defamation",
+            "impersonation",
+            "spam",
+            "political_campaigning",
+            "misinformation"
+          ]}
+        },
+        "context_disruption": {
+          "type": "array",
+          "items": { "type": "string", "enum": [
+            "off_topic",
+            "trolling",
+            "external_irrelevant",
+            "external_harmful",
+            "external_misleading"
+          ]}
+        },
+        "harassment": {
+          "type": "array",
+          "items": { "type": "string", "enum": [
+            "repeated_abuse",
+            "brigading",
+            "reputational_threats"
+          ]}
+        },
+        "self_harm": {
+          "type": "array",
+          "items": { "type": "string", "enum": [
+            "promotion",
+            "glorification",
+            "mocking"
+          ]}
+        },
+        "coercion_or_grooming": {
+          "type": "array",
+          "items": { "type": "string", "enum": [
+            "manipulation",
+            "normalization",
+            "emotional_blackmail"
+          ]}
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": ["message_id", "content", "tags"],
+  "additionalProperties": false
+}
