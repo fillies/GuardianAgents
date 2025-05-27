@@ -4,7 +4,7 @@ FROM omnifish/glassfish
 COPY target/prova-evaluator-1.0-SNAPSHOT.war /opt/glassfish7/glassfish/domains/domain1/autodeploy/
 
 # Expose the port
-EXPOSE 8081
+EXPOSE 8080
 
 # Run the GlassFish server
 CMD ["asadmin", "start-domain", "--verbose", "domain1"]
