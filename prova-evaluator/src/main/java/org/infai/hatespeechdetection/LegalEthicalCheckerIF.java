@@ -122,33 +122,39 @@ public class LegalEthicalCheckerIF extends HttpServlet {
             }
         }
 
-        // Final response
-        String message = lec.getMessageToString();
-        response.getWriter().write(message);
+        response.getWriter().write(lec.getMessageToString());
     }
 
     @Override
     public void doPut(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        lec.resetMessage();
+        try {
+            JsonReader reader = Json.createReader(request.getInputStream());
+            JsonObject root = reader.readObject();
+            logger.info("Received update=" + root.toString() + " id:" + request.getRequestId());
+            reader.close();
+            JsonArray rulesArray = root.getJsonArray("assert");
+            StringBuffer buffer = new StringBuffer();
 
-        JsonReader reader = Json.createReader(request.getInputStream());
-        JsonObject root = reader.readObject();
-        logger.info("Received update=" + root.toString() + " id:" + request.getRequestId());
-        reader.close();
-        JsonArray rulesArray = root.getJsonArray("assert");
-        StringBuffer buffer = new StringBuffer();
-
-        for (JsonValue value : rulesArray) {
-            if (value.getValueType() == JsonValue.ValueType.STRING) {
-                String rule = ((JsonString) value).getString();
-                buffer.append(rule).append("\n");
-            } else {
-                response.sendError(HttpServletResponse.SC_BAD_REQUEST,"Expect JSON array of strings");
-                return;
+            for (JsonValue value : rulesArray) {
+                if (value.getValueType() == JsonValue.ValueType.STRING) {
+                    String rule = ((JsonString) value).getString();
+                    buffer.append(rule).append("\n");
+                } else {
+                    lec.setMessageStatus(HttpServletResponse.SC_BAD_REQUEST);
+                    response.getWriter().write(lec.getMessageToString());
+                    return;
+                }
             }
+            String region = root.getString("location", null);
+            lec.assertLaws(request.getRequestId(), region, buffer);
+            lec.setMessageStatus(HttpServletResponse.SC_OK);
+            response.getWriter().write(lec.getMessageToString());
         }
-        String region = root.getString("location", null);
-        lec.assertLaws(request.getRequestId(), region, buffer);
-        response.setStatus(HttpServletResponse.SC_OK);
+        catch (Exception e) {
+            lec.setMessageStatus(HttpServletResponse.SC_BAD_REQUEST);
+            response.getWriter().write(lec.getMessageToString());
+        }
     }
 
     @Override

@@ -199,4 +199,10 @@ public class LegalEthicalChecker implements EPService{
         hasComplexRules = false;
     }
 
+    public void setMessageStatus(int status) {
+        if (message == null) {
+            message = new JsonObject();
+        }
+        message.addProperty("status", String.valueOf(status));
+    }
 }

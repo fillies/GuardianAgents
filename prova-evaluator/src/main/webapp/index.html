@@ -32,10 +32,13 @@
                     headers: { 'Content-Type': 'application/json' },
                     body: body
                 });
-                if (response.ok) {
-                    document.getElementById('put-right').value = '200 OK';
-                } else {
-                    document.getElementById('put-right').value = `Error: ${response.status} ${response.statusText}`;
+                const text = await response.text();
+
+                try {
+                    const json = JSON.parse(text);
+                    document.getElementById('put-right').value = JSON.stringify(json, null, 2);
+                } catch (e) {
+                    document.getElementById('put-right').value = 'Invalid JSON response:\n' + text;
                 }
             } catch (err) {
                 document.getElementById('put-right').value = 'Error: ' + err;

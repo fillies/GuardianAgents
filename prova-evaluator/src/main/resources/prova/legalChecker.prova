@@ -66,6 +66,6 @@ legalChecker() :-
 
 legalChecker() :-
     rcvMult(X,P,F,updateRequest,{region->Region,newRules->Buffer}),
-    consult(Buffer),
     assert(assertedRegion(Region)),
+    consult(Buffer),
     spawn(X,$Service,resume,[]).
