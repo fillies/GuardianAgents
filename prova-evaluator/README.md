@@ -28,12 +28,5 @@ This command builds the Docker image and tags it as prova-evaluator.
 Once the image is built, you can run the container with:
 
 ```bash
-docker run --rm -it \
-  --ulimit nproc=65535 \
-  --ulimit nofile=65535:65535 \
-  --pids-limit=-1 \
-  -e SOME_ENV_VAR=value \
-  -v $(pwd)/data:/app/data \
-  -p 8081:8080 \
-  prova-evaluator
+docker run -d --ulimit nproc=65535 --ulimit nofile=65535:65535 --pids-limit=-1 -e SOME_ENV_VAR=value -v $(pwd)/data:/app/data -p 8081:8080 --name prova-evaluator prova-evaluator
 ```
