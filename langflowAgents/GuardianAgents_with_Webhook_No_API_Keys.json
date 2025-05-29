@@ -7,7 +7,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "ParserComponent",
-            "id": "ParserComponent-9TeFQ",
+            "id": "ParserComponent-49EoT",
             "name": "parsed_text",
             "output_types": [
               "Message"
@@ -15,19 +15,19 @@
           },
           "targetHandle": {
             "fieldName": "input_text",
-            "id": "ConditionalRouter-kg6zD",
+            "id": "ConditionalRouter-trY2y",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-ParserComponent-9TeFQ{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-9TeFQœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}-ConditionalRouter-kg6zD{œfieldNameœ:œinput_textœ,œidœ:œConditionalRouter-kg6zDœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-ParserComponent-49EoT{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-49EoTœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}-ConditionalRouter-trY2y{œfieldNameœ:œinput_textœ,œidœ:œConditionalRouter-trY2yœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
         "selected": false,
-        "source": "ParserComponent-9TeFQ",
-        "sourceHandle": "{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-9TeFQœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}",
-        "target": "ConditionalRouter-kg6zD",
-        "targetHandle": "{œfieldNameœ:œinput_textœ,œidœ:œConditionalRouter-kg6zDœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+        "source": "ParserComponent-49EoT",
+        "sourceHandle": "{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-49EoTœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "ConditionalRouter-trY2y",
+        "targetHandle": "{œfieldNameœ:œinput_textœ,œidœ:œConditionalRouter-trY2yœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
       },
       {
         "animated": false,
@@ -35,7 +35,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "ConditionalRouter",
-            "id": "ConditionalRouter-kg6zD",
+            "id": "ConditionalRouter-trY2y",
             "name": "true_result",
             "output_types": [
               "Message"
@@ -43,19 +43,19 @@
           },
           "targetHandle": {
             "fieldName": "text2",
-            "id": "CombineText-zlkDs",
+            "id": "CombineText-EptVS",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-ConditionalRouter-kg6zD{œdataTypeœ:œConditionalRouterœ,œidœ:œConditionalRouter-kg6zDœ,œnameœ:œtrue_resultœ,œoutput_typesœ:[œMessageœ]}-CombineText-zlkDs{œfieldNameœ:œtext2œ,œidœ:œCombineText-zlkDsœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-ConditionalRouter-trY2y{œdataTypeœ:œConditionalRouterœ,œidœ:œConditionalRouter-trY2yœ,œnameœ:œtrue_resultœ,œoutput_typesœ:[œMessageœ]}-CombineText-EptVS{œfieldNameœ:œtext2œ,œidœ:œCombineText-EptVSœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
         "selected": false,
-        "source": "ConditionalRouter-kg6zD",
-        "sourceHandle": "{œdataTypeœ:œConditionalRouterœ,œidœ:œConditionalRouter-kg6zDœ,œnameœ:œtrue_resultœ,œoutput_typesœ:[œMessageœ]}",
-        "target": "CombineText-zlkDs",
-        "targetHandle": "{œfieldNameœ:œtext2œ,œidœ:œCombineText-zlkDsœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+        "source": "ConditionalRouter-trY2y",
+        "sourceHandle": "{œdataTypeœ:œConditionalRouterœ,œidœ:œConditionalRouter-trY2yœ,œnameœ:œtrue_resultœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CombineText-EptVS",
+        "targetHandle": "{œfieldNameœ:œtext2œ,œidœ:œCombineText-EptVSœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
       },
       {
         "animated": false,
@@ -63,7 +63,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "ConditionalRouter",
-            "id": "ConditionalRouter-kg6zD",
+            "id": "ConditionalRouter-trY2y",
             "name": "false_result",
             "output_types": [
               "Message"
@@ -71,19 +71,19 @@
           },
           "targetHandle": {
             "fieldName": "text2",
-            "id": "CombineText-pcpO3",
+            "id": "CombineText-bEbui",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-ConditionalRouter-kg6zD{œdataTypeœ:œConditionalRouterœ,œidœ:œConditionalRouter-kg6zDœ,œnameœ:œfalse_resultœ,œoutput_typesœ:[œMessageœ]}-CombineText-pcpO3{œfieldNameœ:œtext2œ,œidœ:œCombineText-pcpO3œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-ConditionalRouter-trY2y{œdataTypeœ:œConditionalRouterœ,œidœ:œConditionalRouter-trY2yœ,œnameœ:œfalse_resultœ,œoutput_typesœ:[œMessageœ]}-CombineText-bEbui{œfieldNameœ:œtext2œ,œidœ:œCombineText-bEbuiœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
         "selected": false,
-        "source": "ConditionalRouter-kg6zD",
-        "sourceHandle": "{œdataTypeœ:œConditionalRouterœ,œidœ:œConditionalRouter-kg6zDœ,œnameœ:œfalse_resultœ,œoutput_typesœ:[œMessageœ]}",
-        "target": "CombineText-pcpO3",
-        "targetHandle": "{œfieldNameœ:œtext2œ,œidœ:œCombineText-pcpO3œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+        "source": "ConditionalRouter-trY2y",
+        "sourceHandle": "{œdataTypeœ:œConditionalRouterœ,œidœ:œConditionalRouter-trY2yœ,œnameœ:œfalse_resultœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CombineText-bEbui",
+        "targetHandle": "{œfieldNameœ:œtext2œ,œidœ:œCombineText-bEbuiœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
       },
       {
         "animated": false,
@@ -91,7 +91,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "Webhook",
-            "id": "Webhook-6rTZk",
+            "id": "Webhook-vBnoK",
             "name": "output_data",
             "output_types": [
               "Data"
@@ -99,7 +99,7 @@
           },
           "targetHandle": {
             "fieldName": "input_data",
-            "id": "ParserComponent-7fV6s",
+            "id": "ParserComponent-W0sZP",
             "inputTypes": [
               "DataFrame",
               "Data"
@@ -107,12 +107,12 @@
             "type": "other"
           }
         },
-        "id": "reactflow__edge-Webhook-6rTZk{œdataTypeœ:œWebhookœ,œidœ:œWebhook-6rTZkœ,œnameœ:œoutput_dataœ,œoutput_typesœ:[œDataœ]}-ParserComponent-7fV6s{œfieldNameœ:œinput_dataœ,œidœ:œParserComponent-7fV6sœ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}",
+        "id": "reactflow__edge-Webhook-vBnoK{œdataTypeœ:œWebhookœ,œidœ:œWebhook-vBnoKœ,œnameœ:œoutput_dataœ,œoutput_typesœ:[œDataœ]}-ParserComponent-W0sZP{œfieldNameœ:œinput_dataœ,œidœ:œParserComponent-W0sZPœ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}",
         "selected": false,
-        "source": "Webhook-6rTZk",
-        "sourceHandle": "{œdataTypeœ:œWebhookœ,œidœ:œWebhook-6rTZkœ,œnameœ:œoutput_dataœ,œoutput_typesœ:[œDataœ]}",
-        "target": "ParserComponent-7fV6s",
-        "targetHandle": "{œfieldNameœ:œinput_dataœ,œidœ:œParserComponent-7fV6sœ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}"
+        "source": "Webhook-vBnoK",
+        "sourceHandle": "{œdataTypeœ:œWebhookœ,œidœ:œWebhook-vBnoKœ,œnameœ:œoutput_dataœ,œoutput_typesœ:[œDataœ]}",
+        "target": "ParserComponent-W0sZP",
+        "targetHandle": "{œfieldNameœ:œinput_dataœ,œidœ:œParserComponent-W0sZPœ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}"
       },
       {
         "animated": false,
@@ -120,7 +120,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "ParserComponent",
-            "id": "ParserComponent-7fV6s",
+            "id": "ParserComponent-W0sZP",
             "name": "parsed_text",
             "output_types": [
               "Message"
@@ -128,19 +128,19 @@
           },
           "targetHandle": {
             "fieldName": "text1",
-            "id": "CombineText-pcpO3",
+            "id": "CombineText-bEbui",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-ParserComponent-7fV6s{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-7fV6sœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}-CombineText-pcpO3{œfieldNameœ:œtext1œ,œidœ:œCombineText-pcpO3œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-ParserComponent-W0sZP{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-W0sZPœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}-CombineText-bEbui{œfieldNameœ:œtext1œ,œidœ:œCombineText-bEbuiœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
         "selected": false,
-        "source": "ParserComponent-7fV6s",
-        "sourceHandle": "{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-7fV6sœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}",
-        "target": "CombineText-pcpO3",
-        "targetHandle": "{œfieldNameœ:œtext1œ,œidœ:œCombineText-pcpO3œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+        "source": "ParserComponent-W0sZP",
+        "sourceHandle": "{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-W0sZPœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CombineText-bEbui",
+        "targetHandle": "{œfieldNameœ:œtext1œ,œidœ:œCombineText-bEbuiœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
       },
       {
         "animated": false,
@@ -148,7 +148,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "ParserComponent",
-            "id": "ParserComponent-7fV6s",
+            "id": "ParserComponent-W0sZP",
             "name": "parsed_text",
             "output_types": [
               "Message"
@@ -156,19 +156,19 @@
           },
           "targetHandle": {
             "fieldName": "text1",
-            "id": "CombineText-zlkDs",
+            "id": "CombineText-EptVS",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-ParserComponent-7fV6s{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-7fV6sœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}-CombineText-zlkDs{œfieldNameœ:œtext1œ,œidœ:œCombineText-zlkDsœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-ParserComponent-W0sZP{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-W0sZPœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}-CombineText-EptVS{œfieldNameœ:œtext1œ,œidœ:œCombineText-EptVSœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
         "selected": false,
-        "source": "ParserComponent-7fV6s",
-        "sourceHandle": "{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-7fV6sœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}",
-        "target": "CombineText-zlkDs",
-        "targetHandle": "{œfieldNameœ:œtext1œ,œidœ:œCombineText-zlkDsœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+        "source": "ParserComponent-W0sZP",
+        "sourceHandle": "{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-W0sZPœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CombineText-EptVS",
+        "targetHandle": "{œfieldNameœ:œtext1œ,œidœ:œCombineText-EptVSœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
       },
       {
         "animated": false,
@@ -176,7 +176,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "CombineText",
-            "id": "CombineText-pcpO3",
+            "id": "CombineText-bEbui",
             "name": "combined_text",
             "output_types": [
               "Message"
@@ -184,7 +184,7 @@
           },
           "targetHandle": {
             "fieldName": "input_value",
-            "id": "ParseJSONData-Kwp2T",
+            "id": "ParseJSONData-Bpcef",
             "inputTypes": [
               "Message",
               "Data"
@@ -192,12 +192,12 @@
             "type": "other"
           }
         },
-        "id": "reactflow__edge-CombineText-pcpO3{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-pcpO3œ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}-ParseJSONData-Kwp2T{œfieldNameœ:œinput_valueœ,œidœ:œParseJSONData-Kwp2Tœ,œinputTypesœ:[œMessageœ,œDataœ],œtypeœ:œotherœ}",
+        "id": "reactflow__edge-CombineText-bEbui{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-bEbuiœ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}-ParseJSONData-Bpcef{œfieldNameœ:œinput_valueœ,œidœ:œParseJSONData-Bpcefœ,œinputTypesœ:[œMessageœ,œDataœ],œtypeœ:œotherœ}",
         "selected": false,
-        "source": "CombineText-pcpO3",
-        "sourceHandle": "{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-pcpO3œ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}",
-        "target": "ParseJSONData-Kwp2T",
-        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œParseJSONData-Kwp2Tœ,œinputTypesœ:[œMessageœ,œDataœ],œtypeœ:œotherœ}"
+        "source": "CombineText-bEbui",
+        "sourceHandle": "{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-bEbuiœ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "ParseJSONData-Bpcef",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œParseJSONData-Bpcefœ,œinputTypesœ:[œMessageœ,œDataœ],œtypeœ:œotherœ}"
       },
       {
         "animated": false,
@@ -205,7 +205,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "ParseJSONData",
-            "id": "ParseJSONData-Kwp2T",
+            "id": "ParseJSONData-Bpcef",
             "name": "filtered_data",
             "output_types": [
               "Data"
@@ -213,7 +213,7 @@
           },
           "targetHandle": {
             "fieldName": "input_data",
-            "id": "ParserComponent-eyr0v",
+            "id": "ParserComponent-opB0z",
             "inputTypes": [
               "DataFrame",
               "Data"
@@ -221,12 +221,12 @@
             "type": "other"
           }
         },
-        "id": "reactflow__edge-ParseJSONData-Kwp2T{œdataTypeœ:œParseJSONDataœ,œidœ:œParseJSONData-Kwp2Tœ,œnameœ:œfiltered_dataœ,œoutput_typesœ:[œDataœ]}-ParserComponent-eyr0v{œfieldNameœ:œinput_dataœ,œidœ:œParserComponent-eyr0vœ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}",
+        "id": "reactflow__edge-ParseJSONData-Bpcef{œdataTypeœ:œParseJSONDataœ,œidœ:œParseJSONData-Bpcefœ,œnameœ:œfiltered_dataœ,œoutput_typesœ:[œDataœ]}-ParserComponent-opB0z{œfieldNameœ:œinput_dataœ,œidœ:œParserComponent-opB0zœ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}",
         "selected": false,
-        "source": "ParseJSONData-Kwp2T",
-        "sourceHandle": "{œdataTypeœ:œParseJSONDataœ,œidœ:œParseJSONData-Kwp2Tœ,œnameœ:œfiltered_dataœ,œoutput_typesœ:[œDataœ]}",
-        "target": "ParserComponent-eyr0v",
-        "targetHandle": "{œfieldNameœ:œinput_dataœ,œidœ:œParserComponent-eyr0vœ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}"
+        "source": "ParseJSONData-Bpcef",
+        "sourceHandle": "{œdataTypeœ:œParseJSONDataœ,œidœ:œParseJSONData-Bpcefœ,œnameœ:œfiltered_dataœ,œoutput_typesœ:[œDataœ]}",
+        "target": "ParserComponent-opB0z",
+        "targetHandle": "{œfieldNameœ:œinput_dataœ,œidœ:œParserComponent-opB0zœ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}"
       },
       {
         "animated": false,
@@ -234,7 +234,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "ParserComponent",
-            "id": "ParserComponent-eyr0v",
+            "id": "ParserComponent-opB0z",
             "name": "parsed_text",
             "output_types": [
               "Message"
@@ -242,19 +242,19 @@
           },
           "targetHandle": {
             "fieldName": "input_value",
-            "id": "Agent-0dIRD",
+            "id": "Agent-dM5vo",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-ParserComponent-eyr0v{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-eyr0vœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}-Agent-0dIRD{œfieldNameœ:œinput_valueœ,œidœ:œAgent-0dIRDœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-ParserComponent-opB0z{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-opB0zœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}-Agent-dM5vo{œfieldNameœ:œinput_valueœ,œidœ:œAgent-dM5voœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
         "selected": false,
-        "source": "ParserComponent-eyr0v",
-        "sourceHandle": "{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-eyr0vœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}",
-        "target": "Agent-0dIRD",
-        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œAgent-0dIRDœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+        "source": "ParserComponent-opB0z",
+        "sourceHandle": "{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-opB0zœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "Agent-dM5vo",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œAgent-dM5voœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
       },
       {
         "animated": false,
@@ -262,7 +262,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "Agent",
-            "id": "Agent-0dIRD",
+            "id": "Agent-dM5vo",
             "name": "response",
             "output_types": [
               "Message"
@@ -270,19 +270,19 @@
           },
           "targetHandle": {
             "fieldName": "input_value",
-            "id": "Agent-PNMDc",
+            "id": "Agent-tXNqk",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-Agent-0dIRD{œdataTypeœ:œAgentœ,œidœ:œAgent-0dIRDœ,œnameœ:œresponseœ,œoutput_typesœ:[œMessageœ]}-Agent-PNMDc{œfieldNameœ:œinput_valueœ,œidœ:œAgent-PNMDcœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-Agent-dM5vo{œdataTypeœ:œAgentœ,œidœ:œAgent-dM5voœ,œnameœ:œresponseœ,œoutput_typesœ:[œMessageœ]}-Agent-tXNqk{œfieldNameœ:œinput_valueœ,œidœ:œAgent-tXNqkœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
         "selected": false,
-        "source": "Agent-0dIRD",
-        "sourceHandle": "{œdataTypeœ:œAgentœ,œidœ:œAgent-0dIRDœ,œnameœ:œresponseœ,œoutput_typesœ:[œMessageœ]}",
-        "target": "Agent-PNMDc",
-        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œAgent-PNMDcœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+        "source": "Agent-dM5vo",
+        "sourceHandle": "{œdataTypeœ:œAgentœ,œidœ:œAgent-dM5voœ,œnameœ:œresponseœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "Agent-tXNqk",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œAgent-tXNqkœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
       },
       {
         "animated": false,
@@ -290,7 +290,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "Agent",
-            "id": "Agent-PNMDc",
+            "id": "Agent-tXNqk",
             "name": "response",
             "output_types": [
               "Message"
@@ -298,19 +298,19 @@
           },
           "targetHandle": {
             "fieldName": "text2",
-            "id": "CombineText-VSP4l",
+            "id": "CombineText-aYJVN",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-Agent-PNMDc{œdataTypeœ:œAgentœ,œidœ:œAgent-PNMDcœ,œnameœ:œresponseœ,œoutput_typesœ:[œMessageœ]}-CombineText-VSP4l{œfieldNameœ:œtext2œ,œidœ:œCombineText-VSP4lœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-Agent-tXNqk{œdataTypeœ:œAgentœ,œidœ:œAgent-tXNqkœ,œnameœ:œresponseœ,œoutput_typesœ:[œMessageœ]}-CombineText-aYJVN{œfieldNameœ:œtext2œ,œidœ:œCombineText-aYJVNœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
         "selected": false,
-        "source": "Agent-PNMDc",
-        "sourceHandle": "{œdataTypeœ:œAgentœ,œidœ:œAgent-PNMDcœ,œnameœ:œresponseœ,œoutput_typesœ:[œMessageœ]}",
-        "target": "CombineText-VSP4l",
-        "targetHandle": "{œfieldNameœ:œtext2œ,œidœ:œCombineText-VSP4lœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+        "source": "Agent-tXNqk",
+        "sourceHandle": "{œdataTypeœ:œAgentœ,œidœ:œAgent-tXNqkœ,œnameœ:œresponseœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CombineText-aYJVN",
+        "targetHandle": "{œfieldNameœ:œtext2œ,œidœ:œCombineText-aYJVNœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
       },
       {
         "animated": false,
@@ -318,7 +318,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "CombineText",
-            "id": "CombineText-VSP4l",
+            "id": "CombineText-aYJVN",
             "name": "combined_text",
             "output_types": [
               "Message"
@@ -326,19 +326,19 @@
           },
           "targetHandle": {
             "fieldName": "text1",
-            "id": "CombineText-lQ6NS",
+            "id": "CombineText-u7r3H",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-CombineText-VSP4l{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-VSP4lœ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}-CombineText-lQ6NS{œfieldNameœ:œtext1œ,œidœ:œCombineText-lQ6NSœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-CombineText-aYJVN{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-aYJVNœ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}-CombineText-u7r3H{œfieldNameœ:œtext1œ,œidœ:œCombineText-u7r3Hœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
         "selected": false,
-        "source": "CombineText-VSP4l",
-        "sourceHandle": "{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-VSP4lœ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}",
-        "target": "CombineText-lQ6NS",
-        "targetHandle": "{œfieldNameœ:œtext1œ,œidœ:œCombineText-lQ6NSœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+        "source": "CombineText-aYJVN",
+        "sourceHandle": "{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-aYJVNœ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CombineText-u7r3H",
+        "targetHandle": "{œfieldNameœ:œtext1œ,œidœ:œCombineText-u7r3Hœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
       },
       {
         "animated": false,
@@ -346,7 +346,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "TextInput",
-            "id": "TextInput-EBIAX",
+            "id": "TextInput-YyKyE",
             "name": "text",
             "output_types": [
               "Message"
@@ -354,19 +354,19 @@
           },
           "targetHandle": {
             "fieldName": "text2",
-            "id": "CombineText-lQ6NS",
+            "id": "CombineText-u7r3H",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-TextInput-EBIAX{œdataTypeœ:œTextInputœ,œidœ:œTextInput-EBIAXœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}-CombineText-lQ6NS{œfieldNameœ:œtext2œ,œidœ:œCombineText-lQ6NSœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-TextInput-YyKyE{œdataTypeœ:œTextInputœ,œidœ:œTextInput-YyKyEœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}-CombineText-u7r3H{œfieldNameœ:œtext2œ,œidœ:œCombineText-u7r3Hœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
         "selected": false,
-        "source": "TextInput-EBIAX",
-        "sourceHandle": "{œdataTypeœ:œTextInputœ,œidœ:œTextInput-EBIAXœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}",
-        "target": "CombineText-lQ6NS",
-        "targetHandle": "{œfieldNameœ:œtext2œ,œidœ:œCombineText-lQ6NSœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+        "source": "TextInput-YyKyE",
+        "sourceHandle": "{œdataTypeœ:œTextInputœ,œidœ:œTextInput-YyKyEœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CombineText-u7r3H",
+        "targetHandle": "{œfieldNameœ:œtext2œ,œidœ:œCombineText-u7r3Hœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
       },
       {
         "animated": false,
@@ -374,7 +374,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "CombineText",
-            "id": "CombineText-lQ6NS",
+            "id": "CombineText-u7r3H",
             "name": "combined_text",
             "output_types": [
               "Message"
@@ -382,19 +382,19 @@
           },
           "targetHandle": {
             "fieldName": "text1",
-            "id": "CombineText-RwyhD",
+            "id": "CombineText-hGtwy",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-CombineText-lQ6NS{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-lQ6NSœ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}-CombineText-RwyhD{œfieldNameœ:œtext1œ,œidœ:œCombineText-RwyhDœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-CombineText-u7r3H{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-u7r3Hœ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}-CombineText-hGtwy{œfieldNameœ:œtext1œ,œidœ:œCombineText-hGtwyœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
         "selected": false,
-        "source": "CombineText-lQ6NS",
-        "sourceHandle": "{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-lQ6NSœ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}",
-        "target": "CombineText-RwyhD",
-        "targetHandle": "{œfieldNameœ:œtext1œ,œidœ:œCombineText-RwyhDœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+        "source": "CombineText-u7r3H",
+        "sourceHandle": "{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-u7r3Hœ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CombineText-hGtwy",
+        "targetHandle": "{œfieldNameœ:œtext1œ,œidœ:œCombineText-hGtwyœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
       },
       {
         "animated": false,
@@ -402,7 +402,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "ParserComponent",
-            "id": "ParserComponent-eyr0v",
+            "id": "ParserComponent-opB0z",
             "name": "parsed_text",
             "output_types": [
               "Message"
@@ -410,19 +410,19 @@
           },
           "targetHandle": {
             "fieldName": "input_text",
-            "id": "RegexExtractorComponent-i9okH",
+            "id": "RegexExtractorComponent-m9pSO",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-ParserComponent-eyr0v{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-eyr0vœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}-RegexExtractorComponent-i9okH{œfieldNameœ:œinput_textœ,œidœ:œRegexExtractorComponent-i9okHœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-ParserComponent-opB0z{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-opB0zœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}-RegexExtractorComponent-m9pSO{œfieldNameœ:œinput_textœ,œidœ:œRegexExtractorComponent-m9pSOœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
         "selected": false,
-        "source": "ParserComponent-eyr0v",
-        "sourceHandle": "{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-eyr0vœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}",
-        "target": "RegexExtractorComponent-i9okH",
-        "targetHandle": "{œfieldNameœ:œinput_textœ,œidœ:œRegexExtractorComponent-i9okHœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+        "source": "ParserComponent-opB0z",
+        "sourceHandle": "{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-opB0zœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "RegexExtractorComponent-m9pSO",
+        "targetHandle": "{œfieldNameœ:œinput_textœ,œidœ:œRegexExtractorComponent-m9pSOœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
       },
       {
         "animated": false,
@@ -430,7 +430,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "RegexExtractorComponent",
-            "id": "RegexExtractorComponent-i9okH",
+            "id": "RegexExtractorComponent-m9pSO",
             "name": "text",
             "output_types": [
               "Message"
@@ -438,19 +438,19 @@
           },
           "targetHandle": {
             "fieldName": "text2",
-            "id": "CombineText-RwyhD",
+            "id": "CombineText-hGtwy",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-RegexExtractorComponent-i9okH{œdataTypeœ:œRegexExtractorComponentœ,œidœ:œRegexExtractorComponent-i9okHœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}-CombineText-RwyhD{œfieldNameœ:œtext2œ,œidœ:œCombineText-RwyhDœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-RegexExtractorComponent-m9pSO{œdataTypeœ:œRegexExtractorComponentœ,œidœ:œRegexExtractorComponent-m9pSOœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}-CombineText-hGtwy{œfieldNameœ:œtext2œ,œidœ:œCombineText-hGtwyœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
         "selected": false,
-        "source": "RegexExtractorComponent-i9okH",
-        "sourceHandle": "{œdataTypeœ:œRegexExtractorComponentœ,œidœ:œRegexExtractorComponent-i9okHœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}",
-        "target": "CombineText-RwyhD",
-        "targetHandle": "{œfieldNameœ:œtext2œ,œidœ:œCombineText-RwyhDœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+        "source": "RegexExtractorComponent-m9pSO",
+        "sourceHandle": "{œdataTypeœ:œRegexExtractorComponentœ,œidœ:œRegexExtractorComponent-m9pSOœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CombineText-hGtwy",
+        "targetHandle": "{œfieldNameœ:œtext2œ,œidœ:œCombineText-hGtwyœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
       },
       {
         "animated": false,
@@ -458,7 +458,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "TextInput",
-            "id": "TextInput-9zMWp",
+            "id": "TextInput-c6Hrh",
             "name": "text",
             "output_types": [
               "Message"
@@ -466,19 +466,19 @@
           },
           "targetHandle": {
             "fieldName": "text1",
-            "id": "CombineText-VSP4l",
+            "id": "CombineText-aYJVN",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-TextInput-9zMWp{œdataTypeœ:œTextInputœ,œidœ:œTextInput-9zMWpœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}-CombineText-VSP4l{œfieldNameœ:œtext1œ,œidœ:œCombineText-VSP4lœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-TextInput-c6Hrh{œdataTypeœ:œTextInputœ,œidœ:œTextInput-c6Hrhœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}-CombineText-aYJVN{œfieldNameœ:œtext1œ,œidœ:œCombineText-aYJVNœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
         "selected": false,
-        "source": "TextInput-9zMWp",
-        "sourceHandle": "{œdataTypeœ:œTextInputœ,œidœ:œTextInput-9zMWpœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}",
-        "target": "CombineText-VSP4l",
-        "targetHandle": "{œfieldNameœ:œtext1œ,œidœ:œCombineText-VSP4lœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+        "source": "TextInput-c6Hrh",
+        "sourceHandle": "{œdataTypeœ:œTextInputœ,œidœ:œTextInput-c6Hrhœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CombineText-aYJVN",
+        "targetHandle": "{œfieldNameœ:œtext1œ,œidœ:œCombineText-aYJVNœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
       },
       {
         "animated": false,
@@ -486,7 +486,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "CombineText",
-            "id": "CombineText-RwyhD",
+            "id": "CombineText-hGtwy",
             "name": "combined_text",
             "output_types": [
               "Message"
@@ -494,19 +494,19 @@
           },
           "targetHandle": {
             "fieldName": "text1",
-            "id": "CombineText-EavB0",
+            "id": "CombineText-vjg74",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-CombineText-RwyhD{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-RwyhDœ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}-CombineText-EavB0{œfieldNameœ:œtext1œ,œidœ:œCombineText-EavB0œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-CombineText-hGtwy{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-hGtwyœ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}-CombineText-vjg74{œfieldNameœ:œtext1œ,œidœ:œCombineText-vjg74œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
         "selected": false,
-        "source": "CombineText-RwyhD",
-        "sourceHandle": "{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-RwyhDœ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}",
-        "target": "CombineText-EavB0",
-        "targetHandle": "{œfieldNameœ:œtext1œ,œidœ:œCombineText-EavB0œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+        "source": "CombineText-hGtwy",
+        "sourceHandle": "{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-hGtwyœ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CombineText-vjg74",
+        "targetHandle": "{œfieldNameœ:œtext1œ,œidœ:œCombineText-vjg74œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
       },
       {
         "animated": false,
@@ -514,7 +514,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "TextInput",
-            "id": "TextInput-30pJp",
+            "id": "TextInput-kKdue",
             "name": "text",
             "output_types": [
               "Message"
@@ -522,19 +522,19 @@
           },
           "targetHandle": {
             "fieldName": "text2",
-            "id": "CombineText-EavB0",
+            "id": "CombineText-vjg74",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-TextInput-30pJp{œdataTypeœ:œTextInputœ,œidœ:œTextInput-30pJpœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}-CombineText-EavB0{œfieldNameœ:œtext2œ,œidœ:œCombineText-EavB0œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-TextInput-kKdue{œdataTypeœ:œTextInputœ,œidœ:œTextInput-kKdueœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}-CombineText-vjg74{œfieldNameœ:œtext2œ,œidœ:œCombineText-vjg74œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
         "selected": false,
-        "source": "TextInput-30pJp",
-        "sourceHandle": "{œdataTypeœ:œTextInputœ,œidœ:œTextInput-30pJpœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}",
-        "target": "CombineText-EavB0",
-        "targetHandle": "{œfieldNameœ:œtext2œ,œidœ:œCombineText-EavB0œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+        "source": "TextInput-kKdue",
+        "sourceHandle": "{œdataTypeœ:œTextInputœ,œidœ:œTextInput-kKdueœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CombineText-vjg74",
+        "targetHandle": "{œfieldNameœ:œtext2œ,œidœ:œCombineText-vjg74œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
       },
       {
         "animated": false,
@@ -542,7 +542,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "ParseJSONData",
-            "id": "ParseJSONData-xmLfr",
+            "id": "ParseJSONData-LxSRA",
             "name": "filtered_data",
             "output_types": [
               "Data"
@@ -550,19 +550,19 @@
           },
           "targetHandle": {
             "fieldName": "body",
-            "id": "APIRequest-XOXRz",
+            "id": "APIRequest-3BMdN",
             "inputTypes": [
               "Data"
             ],
             "type": "table"
           }
         },
-        "id": "reactflow__edge-ParseJSONData-xmLfr{œdataTypeœ:œParseJSONDataœ,œidœ:œParseJSONData-xmLfrœ,œnameœ:œfiltered_dataœ,œoutput_typesœ:[œDataœ]}-APIRequest-XOXRz{œfieldNameœ:œbodyœ,œidœ:œAPIRequest-XOXRzœ,œinputTypesœ:[œDataœ],œtypeœ:œtableœ}",
+        "id": "reactflow__edge-ParseJSONData-LxSRA{œdataTypeœ:œParseJSONDataœ,œidœ:œParseJSONData-LxSRAœ,œnameœ:œfiltered_dataœ,œoutput_typesœ:[œDataœ]}-APIRequest-3BMdN{œfieldNameœ:œbodyœ,œidœ:œAPIRequest-3BMdNœ,œinputTypesœ:[œDataœ],œtypeœ:œtableœ}",
         "selected": false,
-        "source": "ParseJSONData-xmLfr",
-        "sourceHandle": "{œdataTypeœ:œParseJSONDataœ,œidœ:œParseJSONData-xmLfrœ,œnameœ:œfiltered_dataœ,œoutput_typesœ:[œDataœ]}",
-        "target": "APIRequest-XOXRz",
-        "targetHandle": "{œfieldNameœ:œbodyœ,œidœ:œAPIRequest-XOXRzœ,œinputTypesœ:[œDataœ],œtypeœ:œtableœ}"
+        "source": "ParseJSONData-LxSRA",
+        "sourceHandle": "{œdataTypeœ:œParseJSONDataœ,œidœ:œParseJSONData-LxSRAœ,œnameœ:œfiltered_dataœ,œoutput_typesœ:[œDataœ]}",
+        "target": "APIRequest-3BMdN",
+        "targetHandle": "{œfieldNameœ:œbodyœ,œidœ:œAPIRequest-3BMdNœ,œinputTypesœ:[œDataœ],œtypeœ:œtableœ}"
       },
       {
         "animated": false,
@@ -570,7 +570,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "CombineText",
-            "id": "CombineText-EavB0",
+            "id": "CombineText-vjg74",
             "name": "combined_text",
             "output_types": [
               "Message"
@@ -578,7 +578,7 @@
           },
           "targetHandle": {
             "fieldName": "input_value",
-            "id": "ParseJSONData-xmLfr",
+            "id": "ParseJSONData-LxSRA",
             "inputTypes": [
               "Message",
               "Data"
@@ -586,12 +586,12 @@
             "type": "other"
           }
         },
-        "id": "reactflow__edge-CombineText-EavB0{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-EavB0œ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}-ParseJSONData-xmLfr{œfieldNameœ:œinput_valueœ,œidœ:œParseJSONData-xmLfrœ,œinputTypesœ:[œMessageœ,œDataœ],œtypeœ:œotherœ}",
+        "id": "reactflow__edge-CombineText-vjg74{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-vjg74œ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}-ParseJSONData-LxSRA{œfieldNameœ:œinput_valueœ,œidœ:œParseJSONData-LxSRAœ,œinputTypesœ:[œMessageœ,œDataœ],œtypeœ:œotherœ}",
         "selected": false,
-        "source": "CombineText-EavB0",
-        "sourceHandle": "{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-EavB0œ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}",
-        "target": "ParseJSONData-xmLfr",
-        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œParseJSONData-xmLfrœ,œinputTypesœ:[œMessageœ,œDataœ],œtypeœ:œotherœ}"
+        "source": "CombineText-vjg74",
+        "sourceHandle": "{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-vjg74œ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "ParseJSONData-LxSRA",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œParseJSONData-LxSRAœ,œinputTypesœ:[œMessageœ,œDataœ],œtypeœ:œotherœ}"
       },
       {
         "animated": false,
@@ -599,7 +599,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "APIRequest",
-            "id": "APIRequest-XOXRz",
+            "id": "APIRequest-3BMdN",
             "name": "data",
             "output_types": [
               "Data"
@@ -607,7 +607,7 @@
           },
           "targetHandle": {
             "fieldName": "input_data",
-            "id": "ParserComponent-IgJ16",
+            "id": "ParserComponent-YOmXW",
             "inputTypes": [
               "DataFrame",
               "Data"
@@ -615,12 +615,12 @@
             "type": "other"
           }
         },
-        "id": "reactflow__edge-APIRequest-XOXRz{œdataTypeœ:œAPIRequestœ,œidœ:œAPIRequest-XOXRzœ,œnameœ:œdataœ,œoutput_typesœ:[œDataœ]}-ParserComponent-IgJ16{œfieldNameœ:œinput_dataœ,œidœ:œParserComponent-IgJ16œ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}",
+        "id": "reactflow__edge-APIRequest-3BMdN{œdataTypeœ:œAPIRequestœ,œidœ:œAPIRequest-3BMdNœ,œnameœ:œdataœ,œoutput_typesœ:[œDataœ]}-ParserComponent-YOmXW{œfieldNameœ:œinput_dataœ,œidœ:œParserComponent-YOmXWœ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}",
         "selected": false,
-        "source": "APIRequest-XOXRz",
-        "sourceHandle": "{œdataTypeœ:œAPIRequestœ,œidœ:œAPIRequest-XOXRzœ,œnameœ:œdataœ,œoutput_typesœ:[œDataœ]}",
-        "target": "ParserComponent-IgJ16",
-        "targetHandle": "{œfieldNameœ:œinput_dataœ,œidœ:œParserComponent-IgJ16œ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}"
+        "source": "APIRequest-3BMdN",
+        "sourceHandle": "{œdataTypeœ:œAPIRequestœ,œidœ:œAPIRequest-3BMdNœ,œnameœ:œdataœ,œoutput_typesœ:[œDataœ]}",
+        "target": "ParserComponent-YOmXW",
+        "targetHandle": "{œfieldNameœ:œinput_dataœ,œidœ:œParserComponent-YOmXWœ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}"
       },
       {
         "animated": false,
@@ -628,7 +628,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "CombineText",
-            "id": "CombineText-zlkDs",
+            "id": "CombineText-EptVS",
             "name": "combined_text",
             "output_types": [
               "Message"
@@ -636,19 +636,19 @@
           },
           "targetHandle": {
             "fieldName": "input_value",
-            "id": "Agent-5B4Gr",
+            "id": "Agent-sbyZL",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-CombineText-zlkDs{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-zlkDsœ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}-Agent-5B4Gr{œfieldNameœ:œinput_valueœ,œidœ:œAgent-5B4Grœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-CombineText-EptVS{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-EptVSœ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}-Agent-sbyZL{œfieldNameœ:œinput_valueœ,œidœ:œAgent-sbyZLœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
         "selected": false,
-        "source": "CombineText-zlkDs",
-        "sourceHandle": "{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-zlkDsœ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}",
-        "target": "Agent-5B4Gr",
-        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œAgent-5B4Grœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+        "source": "CombineText-EptVS",
+        "sourceHandle": "{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-EptVSœ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "Agent-sbyZL",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œAgent-sbyZLœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
       },
       {
         "animated": false,
@@ -656,7 +656,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "ParserComponent",
-            "id": "ParserComponent-IgJ16",
+            "id": "ParserComponent-YOmXW",
             "name": "parsed_text",
             "output_types": [
               "Message"
@@ -664,19 +664,19 @@
           },
           "targetHandle": {
             "fieldName": "input_text",
-            "id": "ConditionalRouter-vkqQk",
+            "id": "ConditionalRouter-vB7Fu",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-ParserComponent-IgJ16{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-IgJ16œ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}-ConditionalRouter-vkqQk{œfieldNameœ:œinput_textœ,œidœ:œConditionalRouter-vkqQkœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-ParserComponent-YOmXW{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-YOmXWœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}-ConditionalRouter-vB7Fu{œfieldNameœ:œinput_textœ,œidœ:œConditionalRouter-vB7Fuœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
         "selected": false,
-        "source": "ParserComponent-IgJ16",
-        "sourceHandle": "{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-IgJ16œ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}",
-        "target": "ConditionalRouter-vkqQk",
-        "targetHandle": "{œfieldNameœ:œinput_textœ,œidœ:œConditionalRouter-vkqQkœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+        "source": "ParserComponent-YOmXW",
+        "sourceHandle": "{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-YOmXWœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "ConditionalRouter-vB7Fu",
+        "targetHandle": "{œfieldNameœ:œinput_textœ,œidœ:œConditionalRouter-vB7Fuœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
       },
       {
         "animated": false,
@@ -684,7 +684,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "ConditionalRouter",
-            "id": "ConditionalRouter-vkqQk",
+            "id": "ConditionalRouter-vB7Fu",
             "name": "true_result",
             "output_types": [
               "Message"
@@ -692,19 +692,19 @@
           },
           "targetHandle": {
             "fieldName": "text1",
-            "id": "CombineText-J0JzS",
+            "id": "CombineText-nxbxY",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-ConditionalRouter-vkqQk{œdataTypeœ:œConditionalRouterœ,œidœ:œConditionalRouter-vkqQkœ,œnameœ:œtrue_resultœ,œoutput_typesœ:[œMessageœ]}-CombineText-J0JzS{œfieldNameœ:œtext1œ,œidœ:œCombineText-J0JzSœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-ConditionalRouter-vB7Fu{œdataTypeœ:œConditionalRouterœ,œidœ:œConditionalRouter-vB7Fuœ,œnameœ:œtrue_resultœ,œoutput_typesœ:[œMessageœ]}-CombineText-nxbxY{œfieldNameœ:œtext1œ,œidœ:œCombineText-nxbxYœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
         "selected": false,
-        "source": "ConditionalRouter-vkqQk",
-        "sourceHandle": "{œdataTypeœ:œConditionalRouterœ,œidœ:œConditionalRouter-vkqQkœ,œnameœ:œtrue_resultœ,œoutput_typesœ:[œMessageœ]}",
-        "target": "CombineText-J0JzS",
-        "targetHandle": "{œfieldNameœ:œtext1œ,œidœ:œCombineText-J0JzSœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+        "source": "ConditionalRouter-vB7Fu",
+        "sourceHandle": "{œdataTypeœ:œConditionalRouterœ,œidœ:œConditionalRouter-vB7Fuœ,œnameœ:œtrue_resultœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CombineText-nxbxY",
+        "targetHandle": "{œfieldNameœ:œtext1œ,œidœ:œCombineText-nxbxYœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
       },
       {
         "animated": false,
@@ -712,7 +712,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "CombineText",
-            "id": "CombineText-pcpO3",
+            "id": "CombineText-bEbui",
             "name": "combined_text",
             "output_types": [
               "Message"
@@ -720,19 +720,19 @@
           },
           "targetHandle": {
             "fieldName": "text2",
-            "id": "CombineText-J0JzS",
+            "id": "CombineText-nxbxY",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-CombineText-pcpO3{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-pcpO3œ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}-CombineText-J0JzS{œfieldNameœ:œtext2œ,œidœ:œCombineText-J0JzSœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-CombineText-bEbui{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-bEbuiœ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}-CombineText-nxbxY{œfieldNameœ:œtext2œ,œidœ:œCombineText-nxbxYœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
         "selected": false,
-        "source": "CombineText-pcpO3",
-        "sourceHandle": "{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-pcpO3œ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}",
-        "target": "CombineText-J0JzS",
-        "targetHandle": "{œfieldNameœ:œtext2œ,œidœ:œCombineText-J0JzSœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+        "source": "CombineText-bEbui",
+        "sourceHandle": "{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-bEbuiœ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CombineText-nxbxY",
+        "targetHandle": "{œfieldNameœ:œtext2œ,œidœ:œCombineText-nxbxYœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
       },
       {
         "animated": false,
@@ -740,7 +740,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "CombineText",
-            "id": "CombineText-J0JzS",
+            "id": "CombineText-nxbxY",
             "name": "combined_text",
             "output_types": [
               "Message"
@@ -748,19 +748,19 @@
           },
           "targetHandle": {
             "fieldName": "input_value",
-            "id": "Agent-agzeZ",
+            "id": "Agent-irmcY",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-CombineText-J0JzS{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-J0JzSœ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}-Agent-agzeZ{œfieldNameœ:œinput_valueœ,œidœ:œAgent-agzeZœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-CombineText-nxbxY{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-nxbxYœ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}-Agent-irmcY{œfieldNameœ:œinput_valueœ,œidœ:œAgent-irmcYœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
         "selected": false,
-        "source": "CombineText-J0JzS",
-        "sourceHandle": "{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-J0JzSœ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}",
-        "target": "Agent-agzeZ",
-        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œAgent-agzeZœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+        "source": "CombineText-nxbxY",
+        "sourceHandle": "{œdataTypeœ:œCombineTextœ,œidœ:œCombineText-nxbxYœ,œnameœ:œcombined_textœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "Agent-irmcY",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œAgent-irmcYœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
       },
       {
         "animated": false,
@@ -768,7 +768,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "Webhook",
-            "id": "Webhook-6rTZk",
+            "id": "Webhook-vBnoK",
             "name": "output_data",
             "output_types": [
               "Data"
@@ -776,19 +776,19 @@
           },
           "targetHandle": {
             "fieldName": "query_params",
-            "id": "APIRequest-pTfEJ",
+            "id": "APIRequest-k8Z9f",
             "inputTypes": [
               "Data"
             ],
             "type": "other"
           }
         },
-        "id": "reactflow__edge-Webhook-6rTZk{œdataTypeœ:œWebhookœ,œidœ:œWebhook-6rTZkœ,œnameœ:œoutput_dataœ,œoutput_typesœ:[œDataœ]}-APIRequest-pTfEJ{œfieldNameœ:œquery_paramsœ,œidœ:œAPIRequest-pTfEJœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}",
+        "id": "reactflow__edge-Webhook-vBnoK{œdataTypeœ:œWebhookœ,œidœ:œWebhook-vBnoKœ,œnameœ:œoutput_dataœ,œoutput_typesœ:[œDataœ]}-APIRequest-k8Z9f{œfieldNameœ:œquery_paramsœ,œidœ:œAPIRequest-k8Z9fœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}",
         "selected": false,
-        "source": "Webhook-6rTZk",
-        "sourceHandle": "{œdataTypeœ:œWebhookœ,œidœ:œWebhook-6rTZkœ,œnameœ:œoutput_dataœ,œoutput_typesœ:[œDataœ]}",
-        "target": "APIRequest-pTfEJ",
-        "targetHandle": "{œfieldNameœ:œquery_paramsœ,œidœ:œAPIRequest-pTfEJœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}"
+        "source": "Webhook-vBnoK",
+        "sourceHandle": "{œdataTypeœ:œWebhookœ,œidœ:œWebhook-vBnoKœ,œnameœ:œoutput_dataœ,œoutput_typesœ:[œDataœ]}",
+        "target": "APIRequest-k8Z9f",
+        "targetHandle": "{œfieldNameœ:œquery_paramsœ,œidœ:œAPIRequest-k8Z9fœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}"
       },
       {
         "animated": false,
@@ -796,7 +796,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "APIRequest",
-            "id": "APIRequest-pTfEJ",
+            "id": "APIRequest-k8Z9f",
             "name": "data",
             "output_types": [
               "Data"
@@ -804,7 +804,7 @@
           },
           "targetHandle": {
             "fieldName": "input_data",
-            "id": "ParserComponent-9TeFQ",
+            "id": "ParserComponent-49EoT",
             "inputTypes": [
               "DataFrame",
               "Data"
@@ -812,19 +812,19 @@
             "type": "other"
           }
         },
-        "id": "reactflow__edge-APIRequest-pTfEJ{œdataTypeœ:œAPIRequestœ,œidœ:œAPIRequest-pTfEJœ,œnameœ:œdataœ,œoutput_typesœ:[œDataœ]}-ParserComponent-9TeFQ{œfieldNameœ:œinput_dataœ,œidœ:œParserComponent-9TeFQœ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}",
+        "id": "reactflow__edge-APIRequest-k8Z9f{œdataTypeœ:œAPIRequestœ,œidœ:œAPIRequest-k8Z9fœ,œnameœ:œdataœ,œoutput_typesœ:[œDataœ]}-ParserComponent-49EoT{œfieldNameœ:œinput_dataœ,œidœ:œParserComponent-49EoTœ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}",
         "selected": false,
-        "source": "APIRequest-pTfEJ",
-        "sourceHandle": "{œdataTypeœ:œAPIRequestœ,œidœ:œAPIRequest-pTfEJœ,œnameœ:œdataœ,œoutput_typesœ:[œDataœ]}",
-        "target": "ParserComponent-9TeFQ",
-        "targetHandle": "{œfieldNameœ:œinput_dataœ,œidœ:œParserComponent-9TeFQœ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}"
+        "source": "APIRequest-k8Z9f",
+        "sourceHandle": "{œdataTypeœ:œAPIRequestœ,œidœ:œAPIRequest-k8Z9fœ,œnameœ:œdataœ,œoutput_typesœ:[œDataœ]}",
+        "target": "ParserComponent-49EoT",
+        "targetHandle": "{œfieldNameœ:œinput_dataœ,œidœ:œParserComponent-49EoTœ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}"
       }
     ],
     "nodes": [
       {
         "data": {
           "display_name": "Webhook",
-          "id": "Webhook-6rTZk",
+          "id": "Webhook-vBnoK",
           "node": {
             "base_classes": [
               "Data"
@@ -964,9 +964,9 @@
           "type": "Webhook"
         },
         "dragging": false,
-        "id": "Webhook-6rTZk",
+        "id": "Webhook-vBnoK",
         "measured": {
-          "height": 195,
+          "height": 197,
           "width": 320
         },
         "position": {
@@ -978,7 +978,7 @@
       },
       {
         "data": {
-          "id": "ConditionalRouter-kg6zD",
+          "id": "ConditionalRouter-trY2y",
           "node": {
             "base_classes": [
               "Message"
@@ -1226,9 +1226,9 @@
           "type": "ConditionalRouter"
         },
         "dragging": false,
-        "id": "ConditionalRouter-kg6zD",
+        "id": "ConditionalRouter-trY2y",
         "measured": {
-          "height": 586,
+          "height": 585,
           "width": 320
         },
         "position": {
@@ -1240,7 +1240,7 @@
       },
       {
         "data": {
-          "id": "ParserComponent-9TeFQ",
+          "id": "ParserComponent-49EoT",
           "node": {
             "base_classes": [
               "Message"
@@ -1419,21 +1419,21 @@
           "type": "ParserComponent"
         },
         "dragging": false,
-        "id": "ParserComponent-9TeFQ",
+        "id": "ParserComponent-49EoT",
         "measured": {
-          "height": 310,
+          "height": 311,
           "width": 320
         },
         "position": {
-          "x": 1617.2067740833465,
-          "y": -196.59844885601265
+          "x": 1615.8332063113755,
+          "y": -202.09271994389704
         },
         "selected": false,
         "type": "genericNode"
       },
       {
         "data": {
-          "id": "CombineText-zlkDs",
+          "id": "CombineText-EptVS",
           "node": {
             "base_classes": [
               "Message"
@@ -1571,7 +1571,7 @@
           "type": "CombineText"
         },
         "dragging": false,
-        "id": "CombineText-zlkDs",
+        "id": "CombineText-EptVS",
         "measured": {
           "height": 413,
           "width": 320
@@ -1585,7 +1585,7 @@
       },
       {
         "data": {
-          "id": "CombineText-pcpO3",
+          "id": "CombineText-bEbui",
           "node": {
             "base_classes": [
               "Message"
@@ -1724,7 +1724,7 @@
           "type": "CombineText"
         },
         "dragging": false,
-        "id": "CombineText-pcpO3",
+        "id": "CombineText-bEbui",
         "measured": {
           "height": 413,
           "width": 320
@@ -1740,7 +1740,7 @@
         "data": {
           "description": "Define the agent's instructions, then enter a task to complete using tools.",
           "display_name": "Agent",
-          "id": "Agent-0dIRD",
+          "id": "Agent-dM5vo",
           "node": {
             "base_classes": [
               "Message"
@@ -2431,9 +2431,9 @@
           "type": "Agent"
         },
         "dragging": false,
-        "id": "Agent-0dIRD",
+        "id": "Agent-dM5vo",
         "measured": {
-          "height": 622,
+          "height": 621,
           "width": 320
         },
         "position": {
@@ -2445,7 +2445,7 @@
       },
       {
         "data": {
-          "id": "ParserComponent-7fV6s",
+          "id": "ParserComponent-W0sZP",
           "node": {
             "base_classes": [
               "Message"
@@ -2624,9 +2624,9 @@
           "type": "ParserComponent"
         },
         "dragging": false,
-        "id": "ParserComponent-7fV6s",
+        "id": "ParserComponent-W0sZP",
         "measured": {
-          "height": 310,
+          "height": 311,
           "width": 320
         },
         "position": {
@@ -2638,7 +2638,7 @@
       },
       {
         "data": {
-          "id": "ParseJSONData-Kwp2T",
+          "id": "ParseJSONData-Bpcef",
           "node": {
             "base_classes": [
               "Data"
@@ -2752,9 +2752,9 @@
           "type": "ParseJSONData"
         },
         "dragging": false,
-        "id": "ParseJSONData-Kwp2T",
+        "id": "ParseJSONData-Bpcef",
         "measured": {
-          "height": 272,
+          "height": 273,
           "width": 320
         },
         "position": {
@@ -2766,7 +2766,7 @@
       },
       {
         "data": {
-          "id": "ParserComponent-eyr0v",
+          "id": "ParserComponent-opB0z",
           "node": {
             "base_classes": [
               "Message"
@@ -2945,9 +2945,9 @@
           "type": "ParserComponent"
         },
         "dragging": false,
-        "id": "ParserComponent-eyr0v",
+        "id": "ParserComponent-opB0z",
         "measured": {
-          "height": 310,
+          "height": 311,
           "width": 320
         },
         "position": {
@@ -2961,7 +2961,7 @@
         "data": {
           "description": "Define the agent's instructions, then enter a task to complete using tools.",
           "display_name": "Agent",
-          "id": "Agent-PNMDc",
+          "id": "Agent-tXNqk",
           "node": {
             "base_classes": [
               "Message"
@@ -3650,9 +3650,9 @@
           "type": "Agent"
         },
         "dragging": false,
-        "id": "Agent-PNMDc",
+        "id": "Agent-tXNqk",
         "measured": {
-          "height": 622,
+          "height": 621,
           "width": 320
         },
         "position": {
@@ -3664,7 +3664,7 @@
       },
       {
         "data": {
-          "id": "CombineText-VSP4l",
+          "id": "CombineText-aYJVN",
           "node": {
             "base_classes": [
               "Message"
@@ -3802,7 +3802,7 @@
           "showNode": true,
           "type": "CombineText"
         },
-        "id": "CombineText-VSP4l",
+        "id": "CombineText-aYJVN",
         "measured": {
           "height": 413,
           "width": 320
@@ -3816,7 +3816,7 @@
       },
       {
         "data": {
-          "id": "CombineText-lQ6NS",
+          "id": "CombineText-u7r3H",
           "node": {
             "base_classes": [
               "Message"
@@ -3954,7 +3954,7 @@
           "showNode": true,
           "type": "CombineText"
         },
-        "id": "CombineText-lQ6NS",
+        "id": "CombineText-u7r3H",
         "measured": {
           "height": 413,
           "width": 320
@@ -3968,7 +3968,7 @@
       },
       {
         "data": {
-          "id": "TextInput-EBIAX",
+          "id": "TextInput-YyKyE",
           "node": {
             "base_classes": [
               "Message"
@@ -4059,9 +4059,9 @@
           "type": "TextInput"
         },
         "dragging": false,
-        "id": "TextInput-EBIAX",
+        "id": "TextInput-YyKyE",
         "measured": {
-          "height": 227,
+          "height": 229,
           "width": 320
         },
         "position": {
@@ -4073,7 +4073,7 @@
       },
       {
         "data": {
-          "id": "CombineText-RwyhD",
+          "id": "CombineText-hGtwy",
           "node": {
             "base_classes": [
               "Message"
@@ -4211,7 +4211,7 @@
           "showNode": true,
           "type": "CombineText"
         },
-        "id": "CombineText-RwyhD",
+        "id": "CombineText-hGtwy",
         "measured": {
           "height": 413,
           "width": 320
@@ -4225,7 +4225,7 @@
       },
       {
         "data": {
-          "id": "RegexExtractorComponent-i9okH",
+          "id": "RegexExtractorComponent-m9pSO",
           "node": {
             "base_classes": [
               "Data",
@@ -4352,9 +4352,9 @@
           "type": "RegexExtractorComponent"
         },
         "dragging": false,
-        "id": "RegexExtractorComponent-i9okH",
+        "id": "RegexExtractorComponent-m9pSO",
         "measured": {
-          "height": 378,
+          "height": 379,
           "width": 320
         },
         "position": {
@@ -4366,7 +4366,7 @@
       },
       {
         "data": {
-          "id": "TextInput-9zMWp",
+          "id": "TextInput-c6Hrh",
           "node": {
             "base_classes": [
               "Message"
@@ -4448,7 +4448,7 @@
                 "trace_as_input": true,
                 "trace_as_metadata": true,
                 "type": "str",
-                "value": "{\n  \"rules\":\n"
+                "value": "{\n  \"assert\":\n"
               }
             },
             "tool_mode": false
@@ -4457,9 +4457,9 @@
           "type": "TextInput"
         },
         "dragging": false,
-        "id": "TextInput-9zMWp",
+        "id": "TextInput-c6Hrh",
         "measured": {
-          "height": 227,
+          "height": 229,
           "width": 320
         },
         "position": {
@@ -4471,7 +4471,7 @@
       },
       {
         "data": {
-          "id": "CombineText-EavB0",
+          "id": "CombineText-vjg74",
           "node": {
             "base_classes": [
               "Message"
@@ -4609,7 +4609,7 @@
           "showNode": true,
           "type": "CombineText"
         },
-        "id": "CombineText-EavB0",
+        "id": "CombineText-vjg74",
         "measured": {
           "height": 413,
           "width": 320
@@ -4623,7 +4623,7 @@
       },
       {
         "data": {
-          "id": "TextInput-30pJp",
+          "id": "TextInput-kKdue",
           "node": {
             "base_classes": [
               "Message"
@@ -4713,9 +4713,9 @@
           "showNode": true,
           "type": "TextInput"
         },
-        "id": "TextInput-30pJp",
+        "id": "TextInput-kKdue",
         "measured": {
-          "height": 227,
+          "height": 229,
           "width": 320
         },
         "position": {
@@ -4727,7 +4727,7 @@
       },
       {
         "data": {
-          "id": "APIRequest-XOXRz",
+          "id": "APIRequest-3BMdN",
           "node": {
             "base_classes": [
               "Data",
@@ -4736,15 +4736,13 @@
             "beta": false,
             "conditional_paths": [],
             "custom_fields": {},
-            "description": "Make HTTP requests using URLs or cURL commands.",
+            "description": "Make HTTP requests using URLs.",
             "display_name": "API Request",
             "documentation": "",
             "edited": true,
             "field_order": [
               "urls",
-              "curl",
               "method",
-              "use_curl",
               "query_params",
               "body",
               "headers",
@@ -4799,7 +4797,7 @@
               "_type": "Component",
               "body": {
                 "_input_type": "TableInput",
-                "advanced": true,
+                "advanced": false,
                 "display_name": "Body",
                 "dynamic": false,
                 "info": "The body to send with the request as a dictionary (for POST, PATCH, PUT).",
@@ -4866,33 +4864,7 @@
                 "show": true,
                 "title_case": false,
                 "type": "code",
-                "value": "import asyncio\nimport json\nimport re\nimport tempfile\nfrom datetime import datetime, timezone\nfrom pathlib import Path\nfrom typing import Any\nfrom urllib.parse import parse_qsl, urlencode, urlparse, urlunparse\n\nimport aiofiles\nimport aiofiles.os as aiofiles_os\nimport httpx\nimport validators\n\nfrom langflow.base.curl.parse import parse_context\nfrom langflow.custom import Component\nfrom langflow.io import (\n    BoolInput,\n    DataInput,\n    DropdownInput,\n    FloatInput,\n    IntInput,\n    MessageTextInput,\n    MultilineInput,\n    Output,\n    StrInput,\n    TableInput,\n)\nfrom langflow.schema import Data\nfrom langflow.schema.dataframe import DataFrame\nfrom langflow.schema.dotdict import dotdict\n\n\nclass APIRequestComponent(Component):\n    display_name = \"API Request\"\n    description = \"Make HTTP requests using URLs or cURL commands.\"\n    icon = \"Globe\"\n    name = \"APIRequest\"\n\n    default_keys = [\"urls\", \"method\", \"query_params\"]\n\n    inputs = [\n        MessageTextInput(\n            name=\"urls\",\n            display_name=\"URLs\",\n            list=True,\n            info=\"Enter one or more URLs, separated by commas.\",\n            advanced=False,\n            tool_mode=True,\n        ),\n        MultilineInput(\n            name=\"curl\",\n            display_name=\"cURL\",\n            info=(\n                \"Paste a curl command to populate the fields. \"\n                \"This will fill in the dictionary fields for headers and body.\"\n            ),\n            advanced=True,\n            real_time_refresh=True,\n            tool_mode=True,\n        ),\n        DropdownInput(\n            name=\"method\",\n            display_name=\"Method\",\n            options=[\"GET\", \"POST\", \"PATCH\", \"PUT\", \"DELETE\"],\n            info=\"The HTTP method to use.\",\n            real_time_refresh=True,\n        ),\n        BoolInput(\n            name=\"use_curl\",\n            display_name=\"Use cURL\",\n            value=False,\n            info=\"Enable cURL mode to populate fields from a cURL command.\",\n            real_time_refresh=True,\n        ),\n        DataInput(\n            name=\"query_params\",\n            display_name=\"Query Parameters\",\n            info=\"The query parameters to append to the URL.\",\n            advanced=True,\n        ),\n        TableInput(\n            name=\"body\",\n            display_name=\"Body\",\n            info=\"The body to send with the request as a dictionary (for POST, PATCH, PUT).\",\n            table_schema=[\n                {\n                    \"name\": \"key\",\n                    \"display_name\": \"Key\",\n                    \"type\": \"str\",\n                    \"description\": \"Parameter name\",\n                },\n                {\n                    \"name\": \"value\",\n                    \"display_name\": \"Value\",\n                    \"description\": \"Parameter value\",\n                },\n            ],\n            value=[],\n            input_types=[\"Data\"],\n            advanced=True,\n        ),\n        TableInput(\n            name=\"headers\",\n            display_name=\"Headers\",\n            info=\"The headers to send with the request as a dictionary.\",\n            table_schema=[\n                {\n                    \"name\": \"key\",\n                    \"display_name\": \"Header\",\n                    \"type\": \"str\",\n                    \"description\": \"Header name\",\n                },\n                {\n                    \"name\": \"value\",\n                    \"display_name\": \"Value\",\n                    \"type\": \"str\",\n                    \"description\": \"Header value\",\n                },\n            ],\n            value=[],\n            advanced=True,\n            input_types=[\"Data\"],\n        ),\n        IntInput(\n            name=\"timeout\",\n            display_name=\"Timeout\",\n            value=5,\n            info=\"The timeout to use for the request.\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"follow_redirects\",\n            display_name=\"Follow Redirects\",\n            value=True,\n            info=\"Whether to follow http redirects.\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"save_to_file\",\n            display_name=\"Save to File\",\n            value=False,\n            info=\"Save the API response to a temporary file\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"include_httpx_metadata\",\n            display_name=\"Include HTTPx Metadata\",\n            value=False,\n            info=(\n                \"Include properties such as headers, status_code, response_headers, \"\n                \"and redirection_history in the output.\"\n            ),\n            advanced=True,\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Data\", name=\"data\", method=\"make_requests\"),\n        Output(display_name=\"DataFrame\", name=\"dataframe\", method=\"as_dataframe\"),\n    ]\n\n    def _parse_json_value(self, value: Any) -> Any:\n        \"\"\"Parse a value that might be a JSON string.\"\"\"\n        if not isinstance(value, str):\n            return value\n\n        try:\n            parsed = json.loads(value)\n        except json.JSONDecodeError:\n            return value\n        else:\n            return parsed\n\n    def _process_body(self, body: Any) -> dict:\n        \"\"\"Process the body input into a valid dictionary.\n\n        Args:\n            body: The body to process, can be dict, str, or list\n        Returns:\n            Processed dictionary\n        \"\"\"\n        if body is None:\n            return {}\n        if isinstance(body, dict):\n            return self._process_dict_body(body)\n        if isinstance(body, str):\n            return self._process_string_body(body)\n        if isinstance(body, list):\n            return body[0]\n\n        return body.data\n\n    def _process_dict_body(self, body: dict) -> dict:\n        \"\"\"Process dictionary body by parsing JSON values.\"\"\"\n        return {k: self._parse_json_value(v) for k, v in body.items()}\n\n    def _process_string_body(self, body: str) -> dict:\n        \"\"\"Process string body by attempting JSON parse.\"\"\"\n        try:\n            return self._process_body(json.loads(body))\n        except json.JSONDecodeError:\n            return {\"data\": body}\n\n    def _process_list_body(self, body: list) -> dict:\n        \"\"\"Process list body by converting to key-value dictionary.\"\"\"\n        processed_dict = {}\n\n        try:\n            for item in body:\n                if not self._is_valid_key_value_item(item):\n                    continue\n\n                key = item[\"key\"]\n                value = self._parse_json_value(item[\"value\"])\n                processed_dict[key] = value\n\n        except (KeyError, TypeError, ValueError) as e:\n            self.log(f\"Failed to process body list: {e}\")\n            return {}  # Return empty dictionary instead of None\n\n        return processed_dict\n\n    def _is_valid_key_value_item(self, item: Any) -> bool:\n        \"\"\"Check if an item is a valid key-value dictionary.\"\"\"\n        return isinstance(item, dict) and \"key\" in item and \"value\" in item\n\n    def parse_curl(self, curl: str, build_config: dotdict) -> dotdict:\n        \"\"\"Parse a cURL command and update build configuration.\n\n        Args:\n            curl: The cURL command to parse\n            build_config: The build configuration to update\n        Returns:\n            Updated build configuration\n        \"\"\"\n        try:\n            parsed = parse_context(curl)\n\n            # Update basic configuration\n            build_config[\"urls\"][\"value\"] = [parsed.url]\n            build_config[\"method\"][\"value\"] = parsed.method.upper()\n            build_config[\"headers\"][\"advanced\"] = True\n            build_config[\"body\"][\"advanced\"] = True\n\n            # Process headers\n            headers_list = [{\"key\": k, \"value\": v} for k, v in parsed.headers.items()]\n            build_config[\"headers\"][\"value\"] = headers_list\n\n            if headers_list:\n                build_config[\"headers\"][\"advanced\"] = False\n\n            # Process body data\n            if not parsed.data:\n                build_config[\"body\"][\"value\"] = []\n            elif parsed.data:\n                try:\n                    json_data = json.loads(parsed.data)\n                    if isinstance(json_data, dict):\n                        body_list = [\n                            {\"key\": k, \"value\": json.dumps(v) if isinstance(v, dict | list) else str(v)}\n                            for k, v in json_data.items()\n                        ]\n                        build_config[\"body\"][\"value\"] = body_list\n                        build_config[\"body\"][\"advanced\"] = False\n                    else:\n                        build_config[\"body\"][\"value\"] = [{\"key\": \"data\", \"value\": json.dumps(json_data)}]\n                        build_config[\"body\"][\"advanced\"] = False\n                except json.JSONDecodeError:\n                    build_config[\"body\"][\"value\"] = [{\"key\": \"data\", \"value\": parsed.data}]\n                    build_config[\"body\"][\"advanced\"] = False\n\n        except Exception as exc:\n            msg = f\"Error parsing curl: {exc}\"\n            self.log(msg)\n            raise ValueError(msg) from exc\n\n        return build_config\n\n    def update_build_config(self, build_config: dotdict, field_value: Any, field_name: str | None = None) -> dotdict:\n        if field_name == \"use_curl\":\n            build_config = self._update_curl_mode(build_config, use_curl=field_value)\n\n            # Fields that should not be reset\n            preserve_fields = {\"timeout\", \"follow_redirects\", \"save_to_file\", \"include_httpx_metadata\", \"use_curl\"}\n\n            # Mapping between input types and their reset values\n            type_reset_mapping = {\n                TableInput: [],\n                BoolInput: False,\n                IntInput: 0,\n                FloatInput: 0.0,\n                MessageTextInput: \"\",\n                StrInput: \"\",\n                MultilineInput: \"\",\n                DropdownInput: \"GET\",\n                DataInput: {},\n            }\n\n            for input_field in self.inputs:\n                # Only reset if field is not in preserve list\n                if input_field.name not in preserve_fields:\n                    reset_value = type_reset_mapping.get(type(input_field), None)\n                    build_config[input_field.name][\"value\"] = reset_value\n                    self.log(f\"Reset field {input_field.name} to {reset_value}\")\n        elif field_name == \"method\" and not self.use_curl:\n            build_config = self._update_method_fields(build_config, field_value)\n        elif field_name == \"curl\" and self.use_curl and field_value:\n            build_config = self.parse_curl(field_value, build_config)\n        return build_config\n\n    def _update_curl_mode(self, build_config: dotdict, *, use_curl: bool) -> dotdict:\n        always_visible = [\"method\", \"use_curl\"]\n\n        for field in self.inputs:\n            field_name = field.name\n            field_config = build_config.get(field_name)\n            if isinstance(field_config, dict):\n                if field_name in always_visible:\n                    field_config[\"advanced\"] = False\n                elif field_name == \"urls\":\n                    field_config[\"advanced\"] = use_curl\n                elif field_name == \"curl\":\n                    field_config[\"advanced\"] = not use_curl\n                    field_config[\"real_time_refresh\"] = use_curl\n                elif field_name in {\"body\", \"headers\"}:\n                    field_config[\"advanced\"] = True  # Always keep body and headers in advanced when use_curl is False\n                else:\n                    field_config[\"advanced\"] = use_curl\n            else:\n                self.log(f\"Expected dict for build_config[{field_name}], got {type(field_config).__name__}\")\n\n        if not use_curl:\n            current_method = build_config.get(\"method\", {}).get(\"value\", \"GET\")\n            build_config = self._update_method_fields(build_config, current_method)\n\n        return build_config\n\n    def _update_method_fields(self, build_config: dotdict, method: str) -> dotdict:\n        common_fields = [\n            \"urls\",\n            \"method\",\n            \"use_curl\",\n        ]\n\n        always_advanced_fields = [\n            \"body\",\n            \"headers\",\n            \"timeout\",\n            \"follow_redirects\",\n            \"save_to_file\",\n            \"include_httpx_metadata\",\n        ]\n\n        body_fields = [\"body\"]\n\n        for field in self.inputs:\n            field_name = field.name\n            field_config = build_config.get(field_name)\n            if isinstance(field_config, dict):\n                if field_name in common_fields:\n                    field_config[\"advanced\"] = False\n                elif field_name in body_fields:\n                    field_config[\"advanced\"] = method not in {\"POST\", \"PUT\", \"PATCH\"}\n                elif field_name in always_advanced_fields:\n                    field_config[\"advanced\"] = True\n                else:\n                    field_config[\"advanced\"] = True\n            else:\n                self.log(f\"Expected dict for build_config[{field_name}], got {type(field_config).__name__}\")\n\n        return build_config\n\n    async def make_request(\n        self,\n        client: httpx.AsyncClient,\n        method: str,\n        url: str,\n        headers: dict | None = None,\n        body: Any = None,\n        timeout: int = 5,\n        *,\n        follow_redirects: bool = True,\n        save_to_file: bool = False,\n        include_httpx_metadata: bool = False,\n    ) -> Data:\n        method = method.upper()\n        if method not in {\"GET\", \"POST\", \"PATCH\", \"PUT\", \"DELETE\"}:\n            msg = f\"Unsupported method: {method}\"\n            raise ValueError(msg)\n\n        # Process body using the new helper method\n\n        self.log(body, \"#1\")\n        processed_body = self._process_body(body)\n        self.log(processed_body, \"#2\")\n\n        redirection_history = []\n\n        try:\n            response = await client.request(\n                method,\n                url,\n                headers=headers,\n                json=processed_body,\n                timeout=timeout,\n                follow_redirects=follow_redirects,\n            )\n\n            redirection_history = [\n                {\n                    \"url\": redirect.headers.get(\"Location\", str(redirect.url)),\n                    \"status_code\": redirect.status_code,\n                }\n                for redirect in response.history\n            ]\n\n            is_binary, file_path = await self._response_info(response, with_file_path=save_to_file)\n            response_headers = self._headers_to_dict(response.headers)\n\n            metadata: dict[str, Any] = {\n                \"source\": url,\n            }\n\n            if save_to_file:\n                mode = \"wb\" if is_binary else \"w\"\n                encoding = response.encoding if mode == \"w\" else None\n                if file_path:\n                    # Ensure parent directory exists\n                    await aiofiles_os.makedirs(file_path.parent, exist_ok=True)\n                    if is_binary:\n                        async with aiofiles.open(file_path, \"wb\") as f:\n                            await f.write(response.content)\n                            await f.flush()\n                    else:\n                        async with aiofiles.open(file_path, \"w\", encoding=encoding) as f:\n                            await f.write(response.text)\n                            await f.flush()\n                    metadata[\"file_path\"] = str(file_path)\n\n                if include_httpx_metadata:\n                    metadata.update(\n                        {\n                            \"headers\": headers,\n                            \"status_code\": response.status_code,\n                            \"response_headers\": response_headers,\n                            **({\"redirection_history\": redirection_history} if redirection_history else {}),\n                        }\n                    )\n                return Data(data=metadata)\n\n            if is_binary:\n                result = response.content\n            else:\n                try:\n                    result = response.json()\n                except json.JSONDecodeError:\n                    self.log(\"Failed to decode JSON response\")\n                    result = response.text.encode(\"utf-8\")\n\n            metadata.update({\"result\": result})\n\n            if include_httpx_metadata:\n                metadata.update(\n                    {\n                        \"headers\": headers,\n                        \"status_code\": response.status_code,\n                        \"response_headers\": response_headers,\n                        **({\"redirection_history\": redirection_history} if redirection_history else {}),\n                    }\n                )\n            return Data(data=metadata)\n        except httpx.TimeoutException:\n            return Data(\n                data={\n                    \"source\": url,\n                    \"headers\": headers,\n                    \"status_code\": 408,\n                    \"error\": \"Request timed out\",\n                },\n            )\n        except Exception as exc:  # noqa: BLE001\n            self.log(f\"Error making request to {url}\")\n            return Data(\n                data={\n                    \"source\": url,\n                    \"headers\": headers,\n                    \"status_code\": 500,\n                    \"error\": str(exc),\n                    **({\"redirection_history\": redirection_history} if redirection_history else {}),\n                },\n            )\n\n    def add_query_params(self, url: str, params: dict) -> str:\n        url_parts = list(urlparse(url))\n        query = dict(parse_qsl(url_parts[4]))\n        query.update(params)\n        url_parts[4] = urlencode(query)\n        return urlunparse(url_parts)\n\n    async def make_requests(self) -> list[Data]:\n        method = self.method\n        urls = [url.strip() for url in self.urls if url.strip()]\n        headers = self.headers or {}\n        body = self.body or {}\n        timeout = self.timeout\n        follow_redirects = self.follow_redirects\n        save_to_file = self.save_to_file\n        include_httpx_metadata = self.include_httpx_metadata\n\n        if self.use_curl and self.curl:\n            self._build_config = self.parse_curl(self.curl, dotdict())\n\n        invalid_urls = [url for url in urls if not validators.url(url)]\n        if invalid_urls:\n            msg = f\"Invalid URLs provided: {invalid_urls}\"\n            raise ValueError(msg)\n\n        if isinstance(self.query_params, str):\n            query_params = dict(parse_qsl(self.query_params))\n        else:\n            query_params = self.query_params.data if self.query_params else {}\n\n        # Process headers here\n        headers = self._process_headers(headers)\n\n        # Process body\n        self.log(body, \"#3\")\n        body = self._process_body(body)\n        self.log(body, \"#4\")\n\n        bodies = [body] * len(urls)\n\n        urls = [self.add_query_params(url, query_params) for url in urls]\n\n        async with httpx.AsyncClient() as client:\n            results = await asyncio.gather(\n                *[\n                    self.make_request(\n                        client,\n                        method,\n                        u,\n                        headers,\n                        rec,\n                        timeout,\n                        follow_redirects=follow_redirects,\n                        save_to_file=save_to_file,\n                        include_httpx_metadata=include_httpx_metadata,\n                    )\n                    for u, rec in zip(urls, bodies, strict=False)\n                ]\n            )\n        self.status = results\n        return results\n\n    async def _response_info(\n        self, response: httpx.Response, *, with_file_path: bool = False\n    ) -> tuple[bool, Path | None]:\n        \"\"\"Determine the file path and whether the response content is binary.\n\n        Args:\n            response (Response): The HTTP response object.\n            with_file_path (bool): Whether to save the response content to a file.\n\n        Returns:\n            Tuple[bool, Path | None]:\n                A tuple containing a boolean indicating if the content is binary and the full file path (if applicable).\n        \"\"\"\n        content_type = response.headers.get(\"Content-Type\", \"\")\n        is_binary = \"application/octet-stream\" in content_type or \"application/binary\" in content_type\n\n        if not with_file_path:\n            return is_binary, None\n\n        component_temp_dir = Path(tempfile.gettempdir()) / self.__class__.__name__\n\n        # Create directory asynchronously\n        await aiofiles_os.makedirs(component_temp_dir, exist_ok=True)\n\n        filename = None\n        if \"Content-Disposition\" in response.headers:\n            content_disposition = response.headers[\"Content-Disposition\"]\n            filename_match = re.search(r'filename=\"(.+?)\"', content_disposition)\n            if filename_match:\n                extracted_filename = filename_match.group(1)\n                filename = extracted_filename\n\n        # Step 3: Infer file extension or use part of the request URL if no filename\n        if not filename:\n            # Extract the last segment of the URL path\n            url_path = urlparse(str(response.request.url) if response.request else \"\").path\n            base_name = Path(url_path).name  # Get the last segment of the path\n            if not base_name:  # If the path ends with a slash or is empty\n                base_name = \"response\"\n\n            # Infer file extension\n            content_type_to_extension = {\n                \"text/plain\": \".txt\",\n                \"application/json\": \".json\",\n                \"image/jpeg\": \".jpg\",\n                \"image/png\": \".png\",\n                \"application/octet-stream\": \".bin\",\n            }\n            extension = content_type_to_extension.get(content_type, \".bin\" if is_binary else \".txt\")\n            filename = f\"{base_name}{extension}\"\n\n        # Step 4: Define the full file path\n        file_path = component_temp_dir / filename\n\n        # Step 5: Check if file exists asynchronously and handle accordingly\n        try:\n            # Try to create the file exclusively (x mode) to check existence\n            async with aiofiles.open(file_path, \"x\") as _:\n                pass  # File created successfully, we can use this path\n        except FileExistsError:\n            # If file exists, append a timestamp to the filename\n            timestamp = datetime.now(timezone.utc).strftime(\"%Y%m%d%H%M%S%f\")\n            file_path = component_temp_dir / f\"{timestamp}-{filename}\"\n\n        return is_binary, file_path\n\n    def _headers_to_dict(self, headers: httpx.Headers) -> dict[str, str]:\n        \"\"\"Convert HTTP headers to a dictionary with lowercased keys.\"\"\"\n        return {k.lower(): v for k, v in headers.items()}\n\n    def _process_headers(self, headers: Any) -> dict:\n        \"\"\"Process the headers input into a valid dictionary.\n\n        Args:\n            headers: The headers to process, can be dict, str, or list\n        Returns:\n            Processed dictionary\n        \"\"\"\n        if headers is None:\n            return {}\n        if isinstance(headers, dict):\n            return headers\n        if isinstance(headers, list):\n            processed_headers = {}\n            try:\n                for item in headers:\n                    if not self._is_valid_key_value_item(item):\n                        continue\n                    key = item[\"key\"]\n                    value = item[\"value\"]\n                    processed_headers[key] = value\n            except (KeyError, TypeError, ValueError) as e:\n                self.log(f\"Failed to process headers list: {e}\")\n                return {}  # Return empty dictionary instead of None\n            return processed_headers\n        return {}\n\n    async def as_dataframe(self) -> DataFrame:\n        \"\"\"Convert the API response data into a DataFrame.\n\n        Returns:\n            DataFrame: A DataFrame containing the API response data.\n        \"\"\"\n        data = await self.make_requests()\n        return DataFrame(data)\n"
-              },
-              "curl": {
-                "_input_type": "MultilineInput",
-                "advanced": true,
-                "copy_field": false,
-                "display_name": "cURL",
-                "dynamic": false,
-                "info": "Paste a curl command to populate the fields. This will fill in the dictionary fields for headers and body.",
-                "input_types": [
-                  "Message"
-                ],
-                "list": false,
-                "list_add_label": "Add More",
-                "load_from_db": false,
-                "multiline": true,
-                "name": "curl",
-                "placeholder": "",
-                "real_time_refresh": false,
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": true,
-                "trace_as_input": true,
-                "trace_as_metadata": true,
-                "type": "str",
-                "value": ""
+                "value": "import asyncio\nimport json\nimport re\nimport tempfile\nfrom datetime import datetime, timezone\nfrom pathlib import Path\nfrom typing import Any\nfrom urllib.parse import parse_qsl, urlencode, urlparse, urlunparse\n\nimport aiofiles\nimport aiofiles.os as aiofiles_os\nimport httpx\nimport validators\n\nfrom langflow.custom import Component\nfrom langflow.io import (\n    BoolInput,\n    DataInput,\n    DropdownInput,\n    FloatInput,\n    IntInput,\n    MessageTextInput,\n    MultilineInput,\n    Output,\n    StrInput,\n    TableInput,\n)\nfrom langflow.schema import Data\nfrom langflow.schema.dataframe import DataFrame\nfrom langflow.schema.dotdict import dotdict\n\n\nclass APIRequestComponent(Component):\n    display_name = \"API Request\"\n    description = \"Make HTTP requests using URLs.\"\n    icon = \"Globe\"\n    name = \"APIRequest\"\n\n    default_keys = [\"urls\", \"method\", \"query_params\"]\n\n    inputs = [\n        MessageTextInput(\n            name=\"urls\",\n            display_name=\"URLs\",\n            list=True,\n            info=\"Enter one or more URLs, separated by commas.\",\n            advanced=False,\n            tool_mode=True,\n        ),\n        DropdownInput(\n            name=\"method\",\n            display_name=\"Method\",\n            options=[\"GET\", \"POST\", \"PATCH\", \"PUT\", \"DELETE\"],\n            info=\"The HTTP method to use.\",\n            real_time_refresh=True,\n        ),\n        DataInput(\n            name=\"query_params\",\n            display_name=\"Query Parameters\",\n            info=\"The query parameters to append to the URL.\",\n            advanced=True,\n        ),\n        TableInput(\n            name=\"body\",\n            display_name=\"Body\",\n            info=\"The body to send with the request as a dictionary (for POST, PATCH, PUT).\",\n            table_schema=[\n                {\n                    \"name\": \"key\",\n                    \"display_name\": \"Key\",\n                    \"type\": \"str\",\n                    \"description\": \"Parameter name\",\n                },\n                {\n                    \"name\": \"value\",\n                    \"display_name\": \"Value\",\n                    \"description\": \"Parameter value\",\n                },\n            ],\n            value=[],\n            input_types=[\"Data\"],\n            advanced=True,\n        ),\n        TableInput(\n            name=\"headers\",\n            display_name=\"Headers\",\n            info=\"The headers to send with the request as a dictionary.\",\n            table_schema=[\n                {\n                    \"name\": \"key\",\n                    \"display_name\": \"Header\",\n                    \"type\": \"str\",\n                    \"description\": \"Header name\",\n                },\n                {\n                    \"name\": \"value\",\n                    \"display_name\": \"Value\",\n                    \"type\": \"str\",\n                    \"description\": \"Header value\",\n                },\n            ],\n            value=[],\n            advanced=True,\n            input_types=[\"Data\"],\n        ),\n        IntInput(\n            name=\"timeout\",\n            display_name=\"Timeout\",\n            value=5,\n            info=\"The timeout to use for the request.\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"follow_redirects\",\n            display_name=\"Follow Redirects\",\n            value=True,\n            info=\"Whether to follow http redirects.\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"save_to_file\",\n            display_name=\"Save to File\",\n            value=False,\n            info=\"Save the API response to a temporary file\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"include_httpx_metadata\",\n            display_name=\"Include HTTPx Metadata\",\n            value=False,\n            info=(\n                \"Include properties such as headers, status_code, response_headers, \"\n                \"and redirection_history in the output.\"\n            ),\n            advanced=True,\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Data\", name=\"data\", method=\"make_requests\"),\n        Output(display_name=\"DataFrame\", name=\"dataframe\", method=\"as_dataframe\"),\n    ]\n\n    def _parse_json_value(self, value: Any) -> Any:\n        \"\"\"Parse a value that might be a JSON string.\"\"\"\n        if not isinstance(value, str):\n            return value\n\n        try:\n            parsed = json.loads(value)\n        except json.JSONDecodeError:\n            return value\n        else:\n            return parsed\n\n    def _process_body(self, body: Any) -> dict:\n        \"\"\"Process the body input into a valid dictionary.\n\n        Args:\n            body: The body to process, can be dict, str, or list\n        Returns:\n            Processed dictionary\n        \"\"\"\n        if body is None:\n            return {}\n        if isinstance(body, dict):\n            return self._process_dict_body(body)\n        if isinstance(body, str):\n            return self._process_string_body(body)\n        if isinstance(body, list):\n            return body[0]\n\n        return body.data\n\n    def _process_dict_body(self, body: dict) -> dict:\n        \"\"\"Process dictionary body by parsing JSON values.\"\"\"\n        return {k: self._parse_json_value(v) for k, v in body.items()}\n\n    def _process_string_body(self, body: str) -> dict:\n        \"\"\"Process string body by attempting JSON parse.\"\"\"\n        try:\n            return self._process_body(json.loads(body))\n        except json.JSONDecodeError:\n            return {\"data\": body}\n\n    def _process_list_body(self, body: list) -> dict:\n        \"\"\"Process list body by converting to key-value dictionary.\"\"\"\n        processed_dict = {}\n\n        try:\n            for item in body:\n                if not self._is_valid_key_value_item(item):\n                    continue\n\n                key = item[\"key\"]\n                value = self._parse_json_value(item[\"value\"])\n                processed_dict[key] = value\n\n        except (KeyError, TypeError, ValueError) as e:\n            self.log(f\"Failed to process body list: {e}\")\n            return {}  # Return empty dictionary instead of None\n\n        return processed_dict\n\n    def _is_valid_key_value_item(self, item: Any) -> bool:\n        \"\"\"Check if an item is a valid key-value dictionary.\"\"\"\n        return isinstance(item, dict) and \"key\" in item and \"value\" in item\n\n    def update_build_config(self, build_config: dotdict, field_value: Any, field_name: str | None = None) -> dotdict:\n        if field_name == \"method\":\n            build_config = self._update_method_fields(build_config, field_value)\n        return build_config\n\n    def _update_method_fields(self, build_config: dotdict, method: str) -> dotdict:\n        common_fields = [\n            \"urls\",\n            \"method\",\n        ]\n\n        always_advanced_fields = [\n            \"body\",\n            \"headers\",\n            \"timeout\",\n            \"follow_redirects\",\n            \"save_to_file\",\n            \"include_httpx_metadata\",\n        ]\n\n        body_fields = [\"body\"]\n\n        for field in self.inputs:\n            field_name = field.name\n            field_config = build_config.get(field_name)\n            if isinstance(field_config, dict):\n                if field_name in common_fields:\n                    field_config[\"advanced\"] = False\n                elif field_name in body_fields:\n                    field_config[\"advanced\"] = method not in {\"POST\", \"PUT\", \"PATCH\"}\n                elif field_name in always_advanced_fields:\n                    field_config[\"advanced\"] = True\n                else:\n                    field_config[\"advanced\"] = True\n            else:\n                self.log(f\"Expected dict for build_config[{field_name}], got {type(field_config).__name__}\")\n\n        return build_config\n\n    async def make_request(\n        self,\n        client: httpx.AsyncClient,\n        method: str,\n        url: str,\n        headers: dict | None = None,\n        body: Any = None,\n        timeout: int = 5,\n        *,\n        follow_redirects: bool = True,\n        save_to_file: bool = False,\n        include_httpx_metadata: bool = False,\n    ) -> Data:\n        method = method.upper()\n        if method not in {\"GET\", \"POST\", \"PATCH\", \"PUT\", \"DELETE\"}:\n            msg = f\"Unsupported method: {method}\"\n            raise ValueError(msg)\n\n        # Process body using the new helper method\n\n        self.log(body, \"#1\")\n        processed_body = self._process_body(body)\n        self.log(processed_body, \"#2\")\n\n        redirection_history = []\n\n        try:\n            response = await client.request(\n                method,\n                url,\n                headers=headers,\n                json=processed_body,\n                timeout=timeout,\n                follow_redirects=follow_redirects,\n            )\n\n            redirection_history = [\n                {\n                    \"url\": redirect.headers.get(\"Location\", str(redirect.url)),\n                    \"status_code\": redirect.status_code,\n                }\n                for redirect in response.history\n            ]\n\n            is_binary, file_path = await self._response_info(response, with_file_path=save_to_file)\n            response_headers = self._headers_to_dict(response.headers)\n\n            metadata: dict[str, Any] = {\n                \"source\": url,\n            }\n\n            if save_to_file:\n                mode = \"wb\" if is_binary else \"w\"\n                encoding = response.encoding if mode == \"w\" else None\n                if file_path:\n                    # Ensure parent directory exists\n                    await aiofiles_os.makedirs(file_path.parent, exist_ok=True)\n                    if is_binary:\n                        async with aiofiles.open(file_path, \"wb\") as f:\n                            await f.write(response.content)\n                            await f.flush()\n                    else:\n                        async with aiofiles.open(file_path, \"w\", encoding=encoding) as f:\n                            await f.write(response.text)\n                            await f.flush()\n                    metadata[\"file_path\"] = str(file_path)\n\n                if include_httpx_metadata:\n                    metadata.update(\n                        {\n                            \"headers\": headers,\n                            \"status_code\": response.status_code,\n                            \"response_headers\": response_headers,\n                            **({\"redirection_history\": redirection_history} if redirection_history else {}),\n                        }\n                    )\n                return Data(data=metadata)\n\n            if is_binary:\n                result = response.content\n            else:\n                try:\n                    result = response.json()\n                except json.JSONDecodeError:\n                    self.log(\"Failed to decode JSON response\")\n                    result = response.text.encode(\"utf-8\")\n\n            metadata.update({\"result\": result})\n\n            if include_httpx_metadata:\n                metadata.update(\n                    {\n                        \"headers\": headers,\n                        \"status_code\": response.status_code,\n                        \"response_headers\": response_headers,\n                        **({\"redirection_history\": redirection_history} if redirection_history else {}),\n                    }\n                )\n            return Data(data=metadata)\n        except httpx.TimeoutException:\n            return Data(\n                data={\n                    \"source\": url,\n                    \"headers\": headers,\n                    \"status_code\": 408,\n                    \"error\": \"Request timed out\",\n                },\n            )\n        except Exception as exc:  # noqa: BLE001\n            self.log(f\"Error making request to {url}\")\n            return Data(\n                data={\n                    \"source\": url,\n                    \"headers\": headers,\n                    \"status_code\": 500,\n                    \"error\": str(exc),\n                    **({\"redirection_history\": redirection_history} if redirection_history else {}),\n                },\n            )\n\n    def add_query_params(self, url: str, params: dict) -> str:\n        url_parts = list(urlparse(url))\n        query = dict(parse_qsl(url_parts[4]))\n        query.update(params)\n        url_parts[4] = urlencode(query)\n        return urlunparse(url_parts)\n\n    async def make_requests(self) -> list[Data]:\n        method = self.method\n        urls = [url.strip() for url in self.urls if url.strip()]\n        headers = self.headers or {}\n        body = self.body or {}\n        timeout = self.timeout\n        follow_redirects = self.follow_redirects\n        save_to_file = self.save_to_file\n        include_httpx_metadata = self.include_httpx_metadata\n\n        invalid_urls = [url for url in urls if not validators.url(url)]\n        if invalid_urls:\n            msg = f\"Invalid URLs provided: {invalid_urls}\"\n            raise ValueError(msg)\n\n        if isinstance(self.query_params, str):\n            query_params = dict(parse_qsl(self.query_params))\n        else:\n            query_params = self.query_params.data if self.query_params else {}\n\n        # Process headers here\n        headers = self._process_headers(headers)\n\n        # Process body\n        self.log(body, \"#3\")\n        body = self._process_body(body)\n        self.log(body, \"#4\")\n\n        bodies = [body] * len(urls)\n\n        urls = [self.add_query_params(url, query_params) for url in urls]\n\n        async with httpx.AsyncClient() as client:\n            results = await asyncio.gather(\n                *[\n                    self.make_request(\n                        client,\n                        method,\n                        u,\n                        headers,\n                        rec,\n                        timeout,\n                        follow_redirects=follow_redirects,\n                        save_to_file=save_to_file,\n                        include_httpx_metadata=include_httpx_metadata,\n                    )\n                    for u, rec in zip(urls, bodies, strict=False)\n                ]\n            )\n        self.status = results\n        return results\n\n    async def _response_info(\n        self, response: httpx.Response, *, with_file_path: bool = False\n    ) -> tuple[bool, Path | None]:\n        \"\"\"Determine the file path and whether the response content is binary.\n\n        Args:\n            response (Response): The HTTP response object.\n            with_file_path (bool): Whether to save the response content to a file.\n\n        Returns:\n            Tuple[bool, Path | None]:\n                A tuple containing a boolean indicating if the content is binary and the full file path (if applicable).\n        \"\"\"\n        content_type = response.headers.get(\"Content-Type\", \"\")\n        is_binary = \"application/octet-stream\" in content_type or \"application/binary\" in content_type\n\n        if not with_file_path:\n            return is_binary, None\n\n        component_temp_dir = Path(tempfile.gettempdir()) / self.__class__.__name__\n\n        # Create directory asynchronously\n        await aiofiles_os.makedirs(component_temp_dir, exist_ok=True)\n\n        filename = None\n        if \"Content-Disposition\" in response.headers:\n            content_disposition = response.headers[\"Content-Disposition\"]\n            filename_match = re.search(r'filename=\"(.+?)\"', content_disposition)\n            if filename_match:\n                extracted_filename = filename_match.group(1)\n                filename = extracted_filename\n\n        # Step 3: Infer file extension or use part of the request URL if no filename\n        if not filename:\n            # Extract the last segment of the URL path\n            url_path = urlparse(str(response.request.url) if response.request else \"\").path\n            base_name = Path(url_path).name  # Get the last segment of the path\n            if not base_name:  # If the path ends with a slash or is empty\n                base_name = \"response\"\n\n            # Infer file extension\n            content_type_to_extension = {\n                \"text/plain\": \".txt\",\n                \"application/json\": \".json\",\n                \"image/jpeg\": \".jpg\",\n                \"image/png\": \".png\",\n                \"application/octet-stream\": \".bin\",\n            }\n            extension = content_type_to_extension.get(content_type, \".bin\" if is_binary else \".txt\")\n            filename = f\"{base_name}{extension}\"\n\n        # Step 4: Define the full file path\n        file_path = component_temp_dir / filename\n\n        # Step 5: Check if file exists asynchronously and handle accordingly\n        try:\n            # Try to create the file exclusively (x mode) to check existence\n            async with aiofiles.open(file_path, \"x\") as _:\n                pass  # File created successfully, we can use this path\n        except FileExistsError:\n            # If file exists, append a timestamp to the filename\n            timestamp = datetime.now(timezone.utc).strftime(\"%Y%m%d%H%M%S%f\")\n            file_path = component_temp_dir / f\"{timestamp}-{filename}\"\n\n        return is_binary, file_path\n\n    def _headers_to_dict(self, headers: httpx.Headers) -> dict[str, str]:\n        \"\"\"Convert HTTP headers to a dictionary with lowercased keys.\"\"\"\n        return {k.lower(): v for k, v in headers.items()}\n\n    def _process_headers(self, headers: Any) -> dict:\n        \"\"\"Process the headers input into a valid dictionary.\n\n        Args:\n            headers: The headers to process, can be dict, str, or list\n        Returns:\n            Processed dictionary\n        \"\"\"\n        if headers is None:\n            return {}\n        if isinstance(headers, dict):\n            return headers\n        if isinstance(headers, list):\n            processed_headers = {}\n            try:\n                for item in headers:\n                    if not self._is_valid_key_value_item(item):\n                        continue\n                    key = item[\"key\"]\n                    value = item[\"value\"]\n                    processed_headers[key] = value\n            except (KeyError, TypeError, ValueError) as e:\n                self.log(f\"Failed to process headers list: {e}\")\n                return {}  # Return empty dictionary instead of None\n            return processed_headers\n        return {}\n\n    async def as_dataframe(self) -> DataFrame:\n        \"\"\"Convert the API response data into a DataFrame.\n\n        Returns:\n            DataFrame: A DataFrame containing the API response data.\n        \"\"\"\n        data = await self.make_requests()\n        return DataFrame(data)\n"
               },
               "follow_redirects": {
                 "_input_type": "BoolInput",
@@ -5011,7 +4983,7 @@
                 "tool_mode": false,
                 "trace_as_metadata": true,
                 "type": "str",
-                "value": "GET"
+                "value": "PUT"
               },
               "query_params": {
                 "_input_type": "DataInput",
@@ -5094,26 +5066,9 @@
                 "trace_as_input": true,
                 "trace_as_metadata": true,
                 "type": "str",
-                "value": ""
-              },
-              "use_curl": {
-                "_input_type": "BoolInput",
-                "advanced": false,
-                "display_name": "Use cURL",
-                "dynamic": false,
-                "info": "Enable cURL mode to populate fields from a cURL command.",
-                "list": false,
-                "list_add_label": "Add More",
-                "name": "use_curl",
-                "placeholder": "",
-                "real_time_refresh": true,
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "bool",
-                "value": false
+                "value": [
+                  "http://81.169.159.230:8081/legalcheck"
+                ]
               }
             },
             "tool_mode": false
@@ -5122,9 +5077,9 @@
           "type": "APIRequest"
         },
         "dragging": false,
-        "id": "APIRequest-XOXRz",
+        "id": "APIRequest-3BMdN",
         "measured": {
-          "height": 428,
+          "height": 451,
           "width": 320
         },
         "position": {
@@ -5136,7 +5091,7 @@
       },
       {
         "data": {
-          "id": "ParseJSONData-xmLfr",
+          "id": "ParseJSONData-LxSRA",
           "node": {
             "base_classes": [
               "Data"
@@ -5247,9 +5202,9 @@
           "type": "ParseJSONData"
         },
         "dragging": false,
-        "id": "ParseJSONData-xmLfr",
+        "id": "ParseJSONData-LxSRA",
         "measured": {
-          "height": 272,
+          "height": 273,
           "width": 320
         },
         "position": {
@@ -5261,7 +5216,7 @@
       },
       {
         "data": {
-          "id": "ParserComponent-IgJ16",
+          "id": "ParserComponent-YOmXW",
           "node": {
             "base_classes": [
               "Message"
@@ -5440,9 +5395,9 @@
           "type": "ParserComponent"
         },
         "dragging": false,
-        "id": "ParserComponent-IgJ16",
+        "id": "ParserComponent-YOmXW",
         "measured": {
-          "height": 310,
+          "height": 311,
           "width": 320
         },
         "position": {
@@ -5454,7 +5409,7 @@
       },
       {
         "data": {
-          "id": "note-VuUGz",
+          "id": "note-fWABi",
           "node": {
             "description": "# Do not change!\n\nThe API Request component below has altered code in order to make it work (because of [this bug in langflow](https://github.com/langflow-ai/langflow/issues/7729)).\n\nSo please do not delete it and swap it for a regular API Request component from the toolbox, because it won't work then.\n\n# ⬇︎",
             "display_name": "",
@@ -5467,7 +5422,7 @@
         },
         "dragging": false,
         "height": 324,
-        "id": "note-VuUGz",
+        "id": "note-fWABi",
         "measured": {
           "height": 324,
           "width": 324
@@ -5485,7 +5440,7 @@
         "data": {
           "description": "Define the agent's instructions, then enter a task to complete using tools.",
           "display_name": "Agent",
-          "id": "Agent-5B4Gr",
+          "id": "Agent-sbyZL",
           "node": {
             "base_classes": [
               "Message"
@@ -6175,9 +6130,9 @@
           "type": "Agent"
         },
         "dragging": false,
-        "id": "Agent-5B4Gr",
+        "id": "Agent-sbyZL",
         "measured": {
-          "height": 622,
+          "height": 621,
           "width": 320
         },
         "position": {
@@ -6189,7 +6144,7 @@
       },
       {
         "data": {
-          "id": "ConditionalRouter-vkqQk",
+          "id": "ConditionalRouter-vB7Fu",
           "node": {
             "base_classes": [
               "Message"
@@ -6437,9 +6392,9 @@
           "type": "ConditionalRouter"
         },
         "dragging": false,
-        "id": "ConditionalRouter-vkqQk",
+        "id": "ConditionalRouter-vB7Fu",
         "measured": {
-          "height": 586,
+          "height": 585,
           "width": 320
         },
         "position": {
@@ -6451,7 +6406,7 @@
       },
       {
         "data": {
-          "id": "CombineText-J0JzS",
+          "id": "CombineText-nxbxY",
           "node": {
             "base_classes": [
               "Message"
@@ -6590,7 +6545,7 @@
           "type": "CombineText"
         },
         "dragging": false,
-        "id": "CombineText-J0JzS",
+        "id": "CombineText-nxbxY",
         "measured": {
           "height": 413,
           "width": 320
@@ -6606,7 +6561,7 @@
         "data": {
           "description": "Define the agent's instructions, then enter a task to complete using tools.",
           "display_name": "Agent",
-          "id": "Agent-agzeZ",
+          "id": "Agent-irmcY",
           "node": {
             "base_classes": [
               "Message"
@@ -7296,9 +7251,9 @@
           "type": "Agent"
         },
         "dragging": false,
-        "id": "Agent-agzeZ",
+        "id": "Agent-irmcY",
         "measured": {
-          "height": 622,
+          "height": 621,
           "width": 320
         },
         "position": {
@@ -7310,7 +7265,7 @@
       },
       {
         "data": {
-          "id": "APIRequest-pTfEJ",
+          "id": "APIRequest-k8Z9f",
           "node": {
             "base_classes": [
               "Data",
@@ -7319,15 +7274,13 @@
             "beta": false,
             "conditional_paths": [],
             "custom_fields": {},
-            "description": "Make HTTP requests using URLs or cURL commands.",
+            "description": "Make HTTP requests using URLs.",
             "display_name": "API Request",
             "documentation": "",
-            "edited": false,
+            "edited": true,
             "field_order": [
               "urls",
-              "curl",
               "method",
-              "use_curl",
               "query_params",
               "body",
               "headers",
@@ -7339,6 +7292,7 @@
             "frozen": false,
             "icon": "Globe",
             "legacy": false,
+            "lf_version": "1.4.1",
             "metadata": {},
             "minimized": false,
             "output_types": [],
@@ -7417,7 +7371,6 @@
                       "display_name": "Value",
                       "edit_mode": "popover",
                       "filterable": true,
-                      "formatter": "text",
                       "hidden": false,
                       "name": "value",
                       "sortable": true
@@ -7448,33 +7401,7 @@
                 "show": true,
                 "title_case": false,
                 "type": "code",
-                "value": "import asyncio\nimport json\nimport re\nimport tempfile\nfrom datetime import datetime, timezone\nfrom pathlib import Path\nfrom typing import Any\nfrom urllib.parse import parse_qsl, urlencode, urlparse, urlunparse\n\nimport aiofiles\nimport aiofiles.os as aiofiles_os\nimport httpx\nimport validators\n\nfrom langflow.base.curl.parse import parse_context\nfrom langflow.custom import Component\nfrom langflow.io import (\n    BoolInput,\n    DataInput,\n    DropdownInput,\n    FloatInput,\n    IntInput,\n    MessageTextInput,\n    MultilineInput,\n    Output,\n    StrInput,\n    TableInput,\n)\nfrom langflow.schema import Data\nfrom langflow.schema.dataframe import DataFrame\nfrom langflow.schema.dotdict import dotdict\n\n\nclass APIRequestComponent(Component):\n    display_name = \"API Request\"\n    description = \"Make HTTP requests using URLs or cURL commands.\"\n    icon = \"Globe\"\n    name = \"APIRequest\"\n\n    default_keys = [\"urls\", \"method\", \"query_params\"]\n\n    inputs = [\n        MessageTextInput(\n            name=\"urls\",\n            display_name=\"URLs\",\n            list=True,\n            info=\"Enter one or more URLs, separated by commas.\",\n            advanced=False,\n            tool_mode=True,\n        ),\n        MultilineInput(\n            name=\"curl\",\n            display_name=\"cURL\",\n            info=(\n                \"Paste a curl command to populate the fields. \"\n                \"This will fill in the dictionary fields for headers and body.\"\n            ),\n            advanced=True,\n            real_time_refresh=True,\n            tool_mode=True,\n        ),\n        DropdownInput(\n            name=\"method\",\n            display_name=\"Method\",\n            options=[\"GET\", \"POST\", \"PATCH\", \"PUT\", \"DELETE\"],\n            info=\"The HTTP method to use.\",\n            real_time_refresh=True,\n        ),\n        BoolInput(\n            name=\"use_curl\",\n            display_name=\"Use cURL\",\n            value=False,\n            info=\"Enable cURL mode to populate fields from a cURL command.\",\n            real_time_refresh=True,\n        ),\n        DataInput(\n            name=\"query_params\",\n            display_name=\"Query Parameters\",\n            info=\"The query parameters to append to the URL.\",\n            advanced=True,\n        ),\n        TableInput(\n            name=\"body\",\n            display_name=\"Body\",\n            info=\"The body to send with the request as a dictionary (for POST, PATCH, PUT).\",\n            table_schema=[\n                {\n                    \"name\": \"key\",\n                    \"display_name\": \"Key\",\n                    \"type\": \"str\",\n                    \"description\": \"Parameter name\",\n                },\n                {\n                    \"name\": \"value\",\n                    \"display_name\": \"Value\",\n                    \"description\": \"Parameter value\",\n                },\n            ],\n            value=[],\n            input_types=[\"Data\"],\n            advanced=True,\n        ),\n        TableInput(\n            name=\"headers\",\n            display_name=\"Headers\",\n            info=\"The headers to send with the request as a dictionary.\",\n            table_schema=[\n                {\n                    \"name\": \"key\",\n                    \"display_name\": \"Header\",\n                    \"type\": \"str\",\n                    \"description\": \"Header name\",\n                },\n                {\n                    \"name\": \"value\",\n                    \"display_name\": \"Value\",\n                    \"type\": \"str\",\n                    \"description\": \"Header value\",\n                },\n            ],\n            value=[],\n            advanced=True,\n            input_types=[\"Data\"],\n        ),\n        IntInput(\n            name=\"timeout\",\n            display_name=\"Timeout\",\n            value=5,\n            info=\"The timeout to use for the request.\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"follow_redirects\",\n            display_name=\"Follow Redirects\",\n            value=True,\n            info=\"Whether to follow http redirects.\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"save_to_file\",\n            display_name=\"Save to File\",\n            value=False,\n            info=\"Save the API response to a temporary file\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"include_httpx_metadata\",\n            display_name=\"Include HTTPx Metadata\",\n            value=False,\n            info=(\n                \"Include properties such as headers, status_code, response_headers, \"\n                \"and redirection_history in the output.\"\n            ),\n            advanced=True,\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Data\", name=\"data\", method=\"make_requests\"),\n        Output(display_name=\"DataFrame\", name=\"dataframe\", method=\"as_dataframe\"),\n    ]\n\n    def _parse_json_value(self, value: Any) -> Any:\n        \"\"\"Parse a value that might be a JSON string.\"\"\"\n        if not isinstance(value, str):\n            return value\n\n        try:\n            parsed = json.loads(value)\n        except json.JSONDecodeError:\n            return value\n        else:\n            return parsed\n\n    def _process_body(self, body: Any) -> dict:\n        \"\"\"Process the body input into a valid dictionary.\n\n        Args:\n            body: The body to process, can be dict, str, or list\n        Returns:\n            Processed dictionary\n        \"\"\"\n        if body is None:\n            return {}\n        if isinstance(body, dict):\n            return self._process_dict_body(body)\n        if isinstance(body, str):\n            return self._process_string_body(body)\n        if isinstance(body, list):\n            return self._process_list_body(body)\n\n        return {}\n\n    def _process_dict_body(self, body: dict) -> dict:\n        \"\"\"Process dictionary body by parsing JSON values.\"\"\"\n        return {k: self._parse_json_value(v) for k, v in body.items()}\n\n    def _process_string_body(self, body: str) -> dict:\n        \"\"\"Process string body by attempting JSON parse.\"\"\"\n        try:\n            return self._process_body(json.loads(body))\n        except json.JSONDecodeError:\n            return {\"data\": body}\n\n    def _process_list_body(self, body: list) -> dict:\n        \"\"\"Process list body by converting to key-value dictionary.\"\"\"\n        processed_dict = {}\n\n        try:\n            for item in body:\n                if not self._is_valid_key_value_item(item):\n                    continue\n\n                key = item[\"key\"]\n                value = self._parse_json_value(item[\"value\"])\n                processed_dict[key] = value\n\n        except (KeyError, TypeError, ValueError) as e:\n            self.log(f\"Failed to process body list: {e}\")\n            return {}  # Return empty dictionary instead of None\n\n        return processed_dict\n\n    def _is_valid_key_value_item(self, item: Any) -> bool:\n        \"\"\"Check if an item is a valid key-value dictionary.\"\"\"\n        return isinstance(item, dict) and \"key\" in item and \"value\" in item\n\n    def parse_curl(self, curl: str, build_config: dotdict) -> dotdict:\n        \"\"\"Parse a cURL command and update build configuration.\n\n        Args:\n            curl: The cURL command to parse\n            build_config: The build configuration to update\n        Returns:\n            Updated build configuration\n        \"\"\"\n        try:\n            parsed = parse_context(curl)\n\n            # Update basic configuration\n            build_config[\"urls\"][\"value\"] = [parsed.url]\n            build_config[\"method\"][\"value\"] = parsed.method.upper()\n            build_config[\"headers\"][\"advanced\"] = True\n            build_config[\"body\"][\"advanced\"] = True\n\n            # Process headers\n            headers_list = [{\"key\": k, \"value\": v} for k, v in parsed.headers.items()]\n            build_config[\"headers\"][\"value\"] = headers_list\n\n            if headers_list:\n                build_config[\"headers\"][\"advanced\"] = False\n\n            # Process body data\n            if not parsed.data:\n                build_config[\"body\"][\"value\"] = []\n            elif parsed.data:\n                try:\n                    json_data = json.loads(parsed.data)\n                    if isinstance(json_data, dict):\n                        body_list = [\n                            {\"key\": k, \"value\": json.dumps(v) if isinstance(v, dict | list) else str(v)}\n                            for k, v in json_data.items()\n                        ]\n                        build_config[\"body\"][\"value\"] = body_list\n                        build_config[\"body\"][\"advanced\"] = False\n                    else:\n                        build_config[\"body\"][\"value\"] = [{\"key\": \"data\", \"value\": json.dumps(json_data)}]\n                        build_config[\"body\"][\"advanced\"] = False\n                except json.JSONDecodeError:\n                    build_config[\"body\"][\"value\"] = [{\"key\": \"data\", \"value\": parsed.data}]\n                    build_config[\"body\"][\"advanced\"] = False\n\n        except Exception as exc:\n            msg = f\"Error parsing curl: {exc}\"\n            self.log(msg)\n            raise ValueError(msg) from exc\n\n        return build_config\n\n    def update_build_config(self, build_config: dotdict, field_value: Any, field_name: str | None = None) -> dotdict:\n        if field_name == \"use_curl\":\n            build_config = self._update_curl_mode(build_config, use_curl=field_value)\n\n            # Fields that should not be reset\n            preserve_fields = {\"timeout\", \"follow_redirects\", \"save_to_file\", \"include_httpx_metadata\", \"use_curl\"}\n\n            # Mapping between input types and their reset values\n            type_reset_mapping = {\n                TableInput: [],\n                BoolInput: False,\n                IntInput: 0,\n                FloatInput: 0.0,\n                MessageTextInput: \"\",\n                StrInput: \"\",\n                MultilineInput: \"\",\n                DropdownInput: \"GET\",\n                DataInput: {},\n            }\n\n            for input_field in self.inputs:\n                # Only reset if field is not in preserve list\n                if input_field.name not in preserve_fields:\n                    reset_value = type_reset_mapping.get(type(input_field), None)\n                    build_config[input_field.name][\"value\"] = reset_value\n                    self.log(f\"Reset field {input_field.name} to {reset_value}\")\n        elif field_name == \"method\" and not self.use_curl:\n            build_config = self._update_method_fields(build_config, field_value)\n        elif field_name == \"curl\" and self.use_curl and field_value:\n            build_config = self.parse_curl(field_value, build_config)\n        return build_config\n\n    def _update_curl_mode(self, build_config: dotdict, *, use_curl: bool) -> dotdict:\n        always_visible = [\"method\", \"use_curl\"]\n\n        for field in self.inputs:\n            field_name = field.name\n            field_config = build_config.get(field_name)\n            if isinstance(field_config, dict):\n                if field_name in always_visible:\n                    field_config[\"advanced\"] = False\n                elif field_name == \"urls\":\n                    field_config[\"advanced\"] = use_curl\n                elif field_name == \"curl\":\n                    field_config[\"advanced\"] = not use_curl\n                    field_config[\"real_time_refresh\"] = use_curl\n                elif field_name in {\"body\", \"headers\"}:\n                    field_config[\"advanced\"] = True  # Always keep body and headers in advanced when use_curl is False\n                else:\n                    field_config[\"advanced\"] = use_curl\n            else:\n                self.log(f\"Expected dict for build_config[{field_name}], got {type(field_config).__name__}\")\n\n        if not use_curl:\n            current_method = build_config.get(\"method\", {}).get(\"value\", \"GET\")\n            build_config = self._update_method_fields(build_config, current_method)\n\n        return build_config\n\n    def _update_method_fields(self, build_config: dotdict, method: str) -> dotdict:\n        common_fields = [\n            \"urls\",\n            \"method\",\n            \"use_curl\",\n        ]\n\n        always_advanced_fields = [\n            \"body\",\n            \"headers\",\n            \"timeout\",\n            \"follow_redirects\",\n            \"save_to_file\",\n            \"include_httpx_metadata\",\n        ]\n\n        body_fields = [\"body\"]\n\n        for field in self.inputs:\n            field_name = field.name\n            field_config = build_config.get(field_name)\n            if isinstance(field_config, dict):\n                if field_name in common_fields:\n                    field_config[\"advanced\"] = False\n                elif field_name in body_fields:\n                    field_config[\"advanced\"] = method not in {\"POST\", \"PUT\", \"PATCH\"}\n                elif field_name in always_advanced_fields:\n                    field_config[\"advanced\"] = True\n                else:\n                    field_config[\"advanced\"] = True\n            else:\n                self.log(f\"Expected dict for build_config[{field_name}], got {type(field_config).__name__}\")\n\n        return build_config\n\n    async def make_request(\n        self,\n        client: httpx.AsyncClient,\n        method: str,\n        url: str,\n        headers: dict | None = None,\n        body: Any = None,\n        timeout: int = 5,\n        *,\n        follow_redirects: bool = True,\n        save_to_file: bool = False,\n        include_httpx_metadata: bool = False,\n    ) -> Data:\n        method = method.upper()\n        if method not in {\"GET\", \"POST\", \"PATCH\", \"PUT\", \"DELETE\"}:\n            msg = f\"Unsupported method: {method}\"\n            raise ValueError(msg)\n\n        # Process body using the new helper method\n        processed_body = self._process_body(body)\n        redirection_history = []\n\n        try:\n            response = await client.request(\n                method,\n                url,\n                headers=headers,\n                json=processed_body,\n                timeout=timeout,\n                follow_redirects=follow_redirects,\n            )\n\n            redirection_history = [\n                {\n                    \"url\": redirect.headers.get(\"Location\", str(redirect.url)),\n                    \"status_code\": redirect.status_code,\n                }\n                for redirect in response.history\n            ]\n\n            is_binary, file_path = await self._response_info(response, with_file_path=save_to_file)\n            response_headers = self._headers_to_dict(response.headers)\n\n            metadata: dict[str, Any] = {\n                \"source\": url,\n            }\n\n            if save_to_file:\n                mode = \"wb\" if is_binary else \"w\"\n                encoding = response.encoding if mode == \"w\" else None\n                if file_path:\n                    # Ensure parent directory exists\n                    await aiofiles_os.makedirs(file_path.parent, exist_ok=True)\n                    if is_binary:\n                        async with aiofiles.open(file_path, \"wb\") as f:\n                            await f.write(response.content)\n                            await f.flush()\n                    else:\n                        async with aiofiles.open(file_path, \"w\", encoding=encoding) as f:\n                            await f.write(response.text)\n                            await f.flush()\n                    metadata[\"file_path\"] = str(file_path)\n\n                if include_httpx_metadata:\n                    metadata.update(\n                        {\n                            \"headers\": headers,\n                            \"status_code\": response.status_code,\n                            \"response_headers\": response_headers,\n                            **({\"redirection_history\": redirection_history} if redirection_history else {}),\n                        }\n                    )\n                return Data(data=metadata)\n\n            if is_binary:\n                result = response.content\n            else:\n                try:\n                    result = response.json()\n                except json.JSONDecodeError:\n                    self.log(\"Failed to decode JSON response\")\n                    result = response.text.encode(\"utf-8\")\n\n            metadata.update({\"result\": result})\n\n            if include_httpx_metadata:\n                metadata.update(\n                    {\n                        \"headers\": headers,\n                        \"status_code\": response.status_code,\n                        \"response_headers\": response_headers,\n                        **({\"redirection_history\": redirection_history} if redirection_history else {}),\n                    }\n                )\n            return Data(data=metadata)\n        except httpx.TimeoutException:\n            return Data(\n                data={\n                    \"source\": url,\n                    \"headers\": headers,\n                    \"status_code\": 408,\n                    \"error\": \"Request timed out\",\n                },\n            )\n        except Exception as exc:  # noqa: BLE001\n            self.log(f\"Error making request to {url}\")\n            return Data(\n                data={\n                    \"source\": url,\n                    \"headers\": headers,\n                    \"status_code\": 500,\n                    \"error\": str(exc),\n                    **({\"redirection_history\": redirection_history} if redirection_history else {}),\n                },\n            )\n\n    def add_query_params(self, url: str, params: dict) -> str:\n        url_parts = list(urlparse(url))\n        query = dict(parse_qsl(url_parts[4]))\n        query.update(params)\n        url_parts[4] = urlencode(query)\n        return urlunparse(url_parts)\n\n    async def make_requests(self) -> list[Data]:\n        method = self.method\n        urls = [url.strip() for url in self.urls if url.strip()]\n        headers = self.headers or {}\n        body = self.body or {}\n        timeout = self.timeout\n        follow_redirects = self.follow_redirects\n        save_to_file = self.save_to_file\n        include_httpx_metadata = self.include_httpx_metadata\n\n        if self.use_curl and self.curl:\n            self._build_config = self.parse_curl(self.curl, dotdict())\n\n        invalid_urls = [url for url in urls if not validators.url(url)]\n        if invalid_urls:\n            msg = f\"Invalid URLs provided: {invalid_urls}\"\n            raise ValueError(msg)\n\n        if isinstance(self.query_params, str):\n            query_params = dict(parse_qsl(self.query_params))\n        else:\n            query_params = self.query_params.data if self.query_params else {}\n\n        # Process headers here\n        headers = self._process_headers(headers)\n\n        # Process body\n        body = self._process_body(body)\n\n        bodies = [body] * len(urls)\n\n        urls = [self.add_query_params(url, query_params) for url in urls]\n\n        async with httpx.AsyncClient() as client:\n            results = await asyncio.gather(\n                *[\n                    self.make_request(\n                        client,\n                        method,\n                        u,\n                        headers,\n                        rec,\n                        timeout,\n                        follow_redirects=follow_redirects,\n                        save_to_file=save_to_file,\n                        include_httpx_metadata=include_httpx_metadata,\n                    )\n                    for u, rec in zip(urls, bodies, strict=False)\n                ]\n            )\n        self.status = results\n        return results\n\n    async def _response_info(\n        self, response: httpx.Response, *, with_file_path: bool = False\n    ) -> tuple[bool, Path | None]:\n        \"\"\"Determine the file path and whether the response content is binary.\n\n        Args:\n            response (Response): The HTTP response object.\n            with_file_path (bool): Whether to save the response content to a file.\n\n        Returns:\n            Tuple[bool, Path | None]:\n                A tuple containing a boolean indicating if the content is binary and the full file path (if applicable).\n        \"\"\"\n        content_type = response.headers.get(\"Content-Type\", \"\")\n        is_binary = \"application/octet-stream\" in content_type or \"application/binary\" in content_type\n\n        if not with_file_path:\n            return is_binary, None\n\n        component_temp_dir = Path(tempfile.gettempdir()) / self.__class__.__name__\n\n        # Create directory asynchronously\n        await aiofiles_os.makedirs(component_temp_dir, exist_ok=True)\n\n        filename = None\n        if \"Content-Disposition\" in response.headers:\n            content_disposition = response.headers[\"Content-Disposition\"]\n            filename_match = re.search(r'filename=\"(.+?)\"', content_disposition)\n            if filename_match:\n                extracted_filename = filename_match.group(1)\n                filename = extracted_filename\n\n        # Step 3: Infer file extension or use part of the request URL if no filename\n        if not filename:\n            # Extract the last segment of the URL path\n            url_path = urlparse(str(response.request.url) if response.request else \"\").path\n            base_name = Path(url_path).name  # Get the last segment of the path\n            if not base_name:  # If the path ends with a slash or is empty\n                base_name = \"response\"\n\n            # Infer file extension\n            content_type_to_extension = {\n                \"text/plain\": \".txt\",\n                \"application/json\": \".json\",\n                \"image/jpeg\": \".jpg\",\n                \"image/png\": \".png\",\n                \"application/octet-stream\": \".bin\",\n            }\n            extension = content_type_to_extension.get(content_type, \".bin\" if is_binary else \".txt\")\n            filename = f\"{base_name}{extension}\"\n\n        # Step 4: Define the full file path\n        file_path = component_temp_dir / filename\n\n        # Step 5: Check if file exists asynchronously and handle accordingly\n        try:\n            # Try to create the file exclusively (x mode) to check existence\n            async with aiofiles.open(file_path, \"x\") as _:\n                pass  # File created successfully, we can use this path\n        except FileExistsError:\n            # If file exists, append a timestamp to the filename\n            timestamp = datetime.now(timezone.utc).strftime(\"%Y%m%d%H%M%S%f\")\n            file_path = component_temp_dir / f\"{timestamp}-{filename}\"\n\n        return is_binary, file_path\n\n    def _headers_to_dict(self, headers: httpx.Headers) -> dict[str, str]:\n        \"\"\"Convert HTTP headers to a dictionary with lowercased keys.\"\"\"\n        return {k.lower(): v for k, v in headers.items()}\n\n    def _process_headers(self, headers: Any) -> dict:\n        \"\"\"Process the headers input into a valid dictionary.\n\n        Args:\n            headers: The headers to process, can be dict, str, or list\n        Returns:\n            Processed dictionary\n        \"\"\"\n        if headers is None:\n            return {}\n        if isinstance(headers, dict):\n            return headers\n        if isinstance(headers, list):\n            processed_headers = {}\n            try:\n                for item in headers:\n                    if not self._is_valid_key_value_item(item):\n                        continue\n                    key = item[\"key\"]\n                    value = item[\"value\"]\n                    processed_headers[key] = value\n            except (KeyError, TypeError, ValueError) as e:\n                self.log(f\"Failed to process headers list: {e}\")\n                return {}  # Return empty dictionary instead of None\n            return processed_headers\n        return {}\n\n    async def as_dataframe(self) -> DataFrame:\n        \"\"\"Convert the API response data into a DataFrame.\n\n        Returns:\n            DataFrame: A DataFrame containing the API response data.\n        \"\"\"\n        data = await self.make_requests()\n        return DataFrame(data)\n"
-              },
-              "curl": {
-                "_input_type": "MultilineInput",
-                "advanced": true,
-                "copy_field": false,
-                "display_name": "cURL",
-                "dynamic": false,
-                "info": "Paste a curl command to populate the fields. This will fill in the dictionary fields for headers and body.",
-                "input_types": [
-                  "Message"
-                ],
-                "list": false,
-                "list_add_label": "Add More",
-                "load_from_db": false,
-                "multiline": true,
-                "name": "curl",
-                "placeholder": "",
-                "real_time_refresh": false,
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": true,
-                "trace_as_input": true,
-                "trace_as_metadata": true,
-                "type": "str",
-                "value": ""
+                "value": "import asyncio\nimport json\nimport re\nimport tempfile\nfrom datetime import datetime, timezone\nfrom pathlib import Path\nfrom typing import Any\nfrom urllib.parse import parse_qsl, urlencode, urlparse, urlunparse\n\nimport aiofiles\nimport aiofiles.os as aiofiles_os\nimport httpx\nimport validators\n\nfrom langflow.custom import Component\nfrom langflow.io import (\n    BoolInput,\n    DataInput,\n    DropdownInput,\n    FloatInput,\n    IntInput,\n    MessageTextInput,\n    MultilineInput,\n    Output,\n    StrInput,\n    TableInput,\n)\nfrom langflow.schema import Data\nfrom langflow.schema.dataframe import DataFrame\nfrom langflow.schema.dotdict import dotdict\n\n\nclass APIRequestComponent(Component):\n    display_name = \"API Request\"\n    description = \"Make HTTP requests using URLs.\"\n    icon = \"Globe\"\n    name = \"APIRequest\"\n\n    default_keys = [\"urls\", \"method\", \"query_params\"]\n\n    inputs = [\n        MessageTextInput(\n            name=\"urls\",\n            display_name=\"URLs\",\n            list=True,\n            info=\"Enter one or more URLs, separated by commas.\",\n            advanced=False,\n            tool_mode=True,\n        ),\n        DropdownInput(\n            name=\"method\",\n            display_name=\"Method\",\n            options=[\"GET\", \"POST\", \"PATCH\", \"PUT\", \"DELETE\"],\n            info=\"The HTTP method to use.\",\n            real_time_refresh=True,\n        ),\n        DataInput(\n            name=\"query_params\",\n            display_name=\"Query Parameters\",\n            info=\"The query parameters to append to the URL.\",\n            advanced=False,\n        ),\n        TableInput(\n            name=\"body\",\n            display_name=\"Body\",\n            info=\"The body to send with the request as a dictionary (for POST, PATCH, PUT).\",\n            table_schema=[\n                {\n                    \"name\": \"key\",\n                    \"display_name\": \"Key\",\n                    \"type\": \"str\",\n                    \"description\": \"Parameter name\",\n                },\n                {\n                    \"name\": \"value\",\n                    \"display_name\": \"Value\",\n                    \"description\": \"Parameter value\",\n                },\n            ],\n            value=[],\n            input_types=[\"Data\"],\n            advanced=True,\n        ),\n        TableInput(\n            name=\"headers\",\n            display_name=\"Headers\",\n            info=\"The headers to send with the request as a dictionary.\",\n            table_schema=[\n                {\n                    \"name\": \"key\",\n                    \"display_name\": \"Header\",\n                    \"type\": \"str\",\n                    \"description\": \"Header name\",\n                },\n                {\n                    \"name\": \"value\",\n                    \"display_name\": \"Value\",\n                    \"type\": \"str\",\n                    \"description\": \"Header value\",\n                },\n            ],\n            value=[],\n            advanced=True,\n            input_types=[\"Data\"],\n        ),\n        IntInput(\n            name=\"timeout\",\n            display_name=\"Timeout\",\n            value=5,\n            info=\"The timeout to use for the request.\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"follow_redirects\",\n            display_name=\"Follow Redirects\",\n            value=True,\n            info=\"Whether to follow http redirects.\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"save_to_file\",\n            display_name=\"Save to File\",\n            value=False,\n            info=\"Save the API response to a temporary file\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"include_httpx_metadata\",\n            display_name=\"Include HTTPx Metadata\",\n            value=False,\n            info=(\n                \"Include properties such as headers, status_code, response_headers, \"\n                \"and redirection_history in the output.\"\n            ),\n            advanced=True,\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Data\", name=\"data\", method=\"make_requests\"),\n        Output(display_name=\"DataFrame\", name=\"dataframe\", method=\"as_dataframe\"),\n    ]\n\n    def _parse_json_value(self, value: Any) -> Any:\n        \"\"\"Parse a value that might be a JSON string.\"\"\"\n        if not isinstance(value, str):\n            return value\n\n        try:\n            parsed = json.loads(value)\n        except json.JSONDecodeError:\n            return value\n        else:\n            return parsed\n\n    def _process_body(self, body: Any) -> dict:\n        \"\"\"Process the body input into a valid dictionary.\n\n        Args:\n            body: The body to process, can be dict, str, or list\n        Returns:\n            Processed dictionary\n        \"\"\"\n        if body is None:\n            return {}\n        if isinstance(body, dict):\n            return self._process_dict_body(body)\n        if isinstance(body, str):\n            return self._process_string_body(body)\n        if isinstance(body, list):\n            return self._process_list_body(body)\n\n        return {}\n\n    def _process_dict_body(self, body: dict) -> dict:\n        \"\"\"Process dictionary body by parsing JSON values.\"\"\"\n        return {k: self._parse_json_value(v) for k, v in body.items()}\n\n    def _process_string_body(self, body: str) -> dict:\n        \"\"\"Process string body by attempting JSON parse.\"\"\"\n        try:\n            return self._process_body(json.loads(body))\n        except json.JSONDecodeError:\n            return {\"data\": body}\n\n    def _process_list_body(self, body: list) -> dict:\n        \"\"\"Process list body by converting to key-value dictionary.\"\"\"\n        processed_dict = {}\n\n        try:\n            for item in body:\n                if not self._is_valid_key_value_item(item):\n                    continue\n\n                key = item[\"key\"]\n                value = self._parse_json_value(item[\"value\"])\n                processed_dict[key] = value\n\n        except (KeyError, TypeError, ValueError) as e:\n            self.log(f\"Failed to process body list: {e}\")\n            return {}  # Return empty dictionary instead of None\n\n        return processed_dict\n\n    def _is_valid_key_value_item(self, item: Any) -> bool:\n        \"\"\"Check if an item is a valid key-value dictionary.\"\"\"\n        return isinstance(item, dict) and \"key\" in item and \"value\" in item\n\n    def update_build_config(self, build_config: dotdict, field_value: Any, field_name: str | None = None) -> dotdict:\n        if field_name == \"method\":\n            build_config = self._update_method_fields(build_config, field_value)\n        return build_config\n\n    def _update_method_fields(self, build_config: dotdict, method: str) -> dotdict:\n        common_fields = [\n            \"urls\",\n            \"method\",\n        ]\n\n        always_advanced_fields = [\n            \"body\",\n            \"headers\",\n            \"timeout\",\n            \"follow_redirects\",\n            \"save_to_file\",\n            \"include_httpx_metadata\",\n        ]\n\n        body_fields = [\"body\"]\n\n        for field in self.inputs:\n            field_name = field.name\n            field_config = build_config.get(field_name)\n            if isinstance(field_config, dict):\n                if field_name in common_fields:\n                    field_config[\"advanced\"] = False\n                elif field_name in body_fields:\n                    field_config[\"advanced\"] = method not in {\"POST\", \"PUT\", \"PATCH\"}\n                elif field_name in always_advanced_fields:\n                    field_config[\"advanced\"] = True\n                else:\n                    field_config[\"advanced\"] = True\n            else:\n                self.log(f\"Expected dict for build_config[{field_name}], got {type(field_config).__name__}\")\n\n        return build_config\n\n    async def make_request(\n        self,\n        client: httpx.AsyncClient,\n        method: str,\n        url: str,\n        headers: dict | None = None,\n        body: Any = None,\n        timeout: int = 5,\n        *,\n        follow_redirects: bool = True,\n        save_to_file: bool = False,\n        include_httpx_metadata: bool = False,\n    ) -> Data:\n        method = method.upper()\n        if method not in {\"GET\", \"POST\", \"PATCH\", \"PUT\", \"DELETE\"}:\n            msg = f\"Unsupported method: {method}\"\n            raise ValueError(msg)\n\n        # Process body using the new helper method\n        processed_body = self._process_body(body)\n        redirection_history = []\n\n        try:\n            response = await client.request(\n                method,\n                url,\n                headers=headers,\n                json=processed_body,\n                timeout=timeout,\n                follow_redirects=follow_redirects,\n            )\n\n            redirection_history = [\n                {\n                    \"url\": redirect.headers.get(\"Location\", str(redirect.url)),\n                    \"status_code\": redirect.status_code,\n                }\n                for redirect in response.history\n            ]\n\n            is_binary, file_path = await self._response_info(response, with_file_path=save_to_file)\n            response_headers = self._headers_to_dict(response.headers)\n\n            metadata: dict[str, Any] = {\n                \"source\": url,\n            }\n\n            if save_to_file:\n                mode = \"wb\" if is_binary else \"w\"\n                encoding = response.encoding if mode == \"w\" else None\n                if file_path:\n                    # Ensure parent directory exists\n                    await aiofiles_os.makedirs(file_path.parent, exist_ok=True)\n                    if is_binary:\n                        async with aiofiles.open(file_path, \"wb\") as f:\n                            await f.write(response.content)\n                            await f.flush()\n                    else:\n                        async with aiofiles.open(file_path, \"w\", encoding=encoding) as f:\n                            await f.write(response.text)\n                            await f.flush()\n                    metadata[\"file_path\"] = str(file_path)\n\n                if include_httpx_metadata:\n                    metadata.update(\n                        {\n                            \"headers\": headers,\n                            \"status_code\": response.status_code,\n                            \"response_headers\": response_headers,\n                            **({\"redirection_history\": redirection_history} if redirection_history else {}),\n                        }\n                    )\n                return Data(data=metadata)\n\n            if is_binary:\n                result = response.content\n            else:\n                try:\n                    result = response.json()\n                except json.JSONDecodeError:\n                    self.log(\"Failed to decode JSON response\")\n                    result = response.text.encode(\"utf-8\")\n\n            metadata.update({\"result\": result})\n\n            if include_httpx_metadata:\n                metadata.update(\n                    {\n                        \"headers\": headers,\n                        \"status_code\": response.status_code,\n                        \"response_headers\": response_headers,\n                        **({\"redirection_history\": redirection_history} if redirection_history else {}),\n                    }\n                )\n            return Data(data=metadata)\n        except httpx.TimeoutException:\n            return Data(\n                data={\n                    \"source\": url,\n                    \"headers\": headers,\n                    \"status_code\": 408,\n                    \"error\": \"Request timed out\",\n                },\n            )\n        except Exception as exc:  # noqa: BLE001\n            self.log(f\"Error making request to {url}\")\n            return Data(\n                data={\n                    \"source\": url,\n                    \"headers\": headers,\n                    \"status_code\": 500,\n                    \"error\": str(exc),\n                    **({\"redirection_history\": redirection_history} if redirection_history else {}),\n                },\n            )\n\n    def add_query_params(self, url: str, params: dict) -> str:\n        url_parts = list(urlparse(url))\n        query = dict(parse_qsl(url_parts[4]))\n        query.update(params)\n        url_parts[4] = urlencode(query)\n        return urlunparse(url_parts)\n\n    async def make_requests(self) -> list[Data]:\n        method = self.method\n        urls = [url.strip() for url in self.urls if url.strip()]\n        headers = self.headers or {}\n        body = self.body or {}\n        timeout = self.timeout\n        follow_redirects = self.follow_redirects\n        save_to_file = self.save_to_file\n        include_httpx_metadata = self.include_httpx_metadata\n\n        invalid_urls = [url for url in urls if not validators.url(url)]\n        if invalid_urls:\n            msg = f\"Invalid URLs provided: {invalid_urls}\"\n            raise ValueError(msg)\n\n        if isinstance(self.query_params, str):\n            query_params = dict(parse_qsl(self.query_params))\n        else:\n            query_params = self.query_params.data if self.query_params else {}\n\n        # Process headers here\n        headers = self._process_headers(headers)\n\n        # Process body\n        body = self._process_body(body)\n\n        bodies = [body] * len(urls)\n\n        urls = [self.add_query_params(url, query_params) for url in urls]\n\n        async with httpx.AsyncClient() as client:\n            results = await asyncio.gather(\n                *[\n                    self.make_request(\n                        client,\n                        method,\n                        u,\n                        headers,\n                        rec,\n                        timeout,\n                        follow_redirects=follow_redirects,\n                        save_to_file=save_to_file,\n                        include_httpx_metadata=include_httpx_metadata,\n                    )\n                    for u, rec in zip(urls, bodies, strict=False)\n                ]\n            )\n        self.status = results\n        return results\n\n    async def _response_info(\n        self, response: httpx.Response, *, with_file_path: bool = False\n    ) -> tuple[bool, Path | None]:\n        \"\"\"Determine the file path and whether the response content is binary.\n\n        Args:\n            response (Response): The HTTP response object.\n            with_file_path (bool): Whether to save the response content to a file.\n\n        Returns:\n            Tuple[bool, Path | None]:\n                A tuple containing a boolean indicating if the content is binary and the full file path (if applicable).\n        \"\"\"\n        content_type = response.headers.get(\"Content-Type\", \"\")\n        is_binary = \"application/octet-stream\" in content_type or \"application/binary\" in content_type\n\n        if not with_file_path:\n            return is_binary, None\n\n        component_temp_dir = Path(tempfile.gettempdir()) / self.__class__.__name__\n\n        # Create directory asynchronously\n        await aiofiles_os.makedirs(component_temp_dir, exist_ok=True)\n\n        filename = None\n        if \"Content-Disposition\" in response.headers:\n            content_disposition = response.headers[\"Content-Disposition\"]\n            filename_match = re.search(r'filename=\"(.+?)\"', content_disposition)\n            if filename_match:\n                extracted_filename = filename_match.group(1)\n                filename = extracted_filename\n\n        # Step 3: Infer file extension or use part of the request URL if no filename\n        if not filename:\n            # Extract the last segment of the URL path\n            url_path = urlparse(str(response.request.url) if response.request else \"\").path\n            base_name = Path(url_path).name  # Get the last segment of the path\n            if not base_name:  # If the path ends with a slash or is empty\n                base_name = \"response\"\n\n            # Infer file extension\n            content_type_to_extension = {\n                \"text/plain\": \".txt\",\n                \"application/json\": \".json\",\n                \"image/jpeg\": \".jpg\",\n                \"image/png\": \".png\",\n                \"application/octet-stream\": \".bin\",\n            }\n            extension = content_type_to_extension.get(content_type, \".bin\" if is_binary else \".txt\")\n            filename = f\"{base_name}{extension}\"\n\n        # Step 4: Define the full file path\n        file_path = component_temp_dir / filename\n\n        # Step 5: Check if file exists asynchronously and handle accordingly\n        try:\n            # Try to create the file exclusively (x mode) to check existence\n            async with aiofiles.open(file_path, \"x\") as _:\n                pass  # File created successfully, we can use this path\n        except FileExistsError:\n            # If file exists, append a timestamp to the filename\n            timestamp = datetime.now(timezone.utc).strftime(\"%Y%m%d%H%M%S%f\")\n            file_path = component_temp_dir / f\"{timestamp}-{filename}\"\n\n        return is_binary, file_path\n\n    def _headers_to_dict(self, headers: httpx.Headers) -> dict[str, str]:\n        \"\"\"Convert HTTP headers to a dictionary with lowercased keys.\"\"\"\n        return {k.lower(): v for k, v in headers.items()}\n\n    def _process_headers(self, headers: Any) -> dict:\n        \"\"\"Process the headers input into a valid dictionary.\n\n        Args:\n            headers: The headers to process, can be dict, str, or list\n        Returns:\n            Processed dictionary\n        \"\"\"\n        if headers is None:\n            return {}\n        if isinstance(headers, dict):\n            return headers\n        if isinstance(headers, list):\n            processed_headers = {}\n            try:\n                for item in headers:\n                    if not self._is_valid_key_value_item(item):\n                        continue\n                    key = item[\"key\"]\n                    value = item[\"value\"]\n                    processed_headers[key] = value\n            except (KeyError, TypeError, ValueError) as e:\n                self.log(f\"Failed to process headers list: {e}\")\n                return {}  # Return empty dictionary instead of None\n            return processed_headers\n        return {}\n\n    async def as_dataframe(self) -> DataFrame:\n        \"\"\"Convert the API response data into a DataFrame.\n\n        Returns:\n            DataFrame: A DataFrame containing the API response data.\n        \"\"\"\n        data = await self.make_requests()\n        return DataFrame(data)\n"
               },
               "follow_redirects": {
                 "_input_type": "BoolInput",
@@ -7574,6 +7501,7 @@
                 "display_name": "Method",
                 "dynamic": false,
                 "info": "The HTTP method to use.",
+                "load_from_db": false,
                 "name": "method",
                 "options": [
                   "GET",
@@ -7596,7 +7524,7 @@
               },
               "query_params": {
                 "_input_type": "DataInput",
-                "advanced": true,
+                "advanced": false,
                 "display_name": "Query Parameters",
                 "dynamic": false,
                 "info": "The query parameters to append to the URL.",
@@ -7605,6 +7533,7 @@
                 ],
                 "list": false,
                 "list_add_label": "Add More",
+                "load_from_db": false,
                 "name": "query_params",
                 "placeholder": "",
                 "required": false,
@@ -7673,26 +7602,9 @@
                 "trace_as_input": true,
                 "trace_as_metadata": true,
                 "type": "str",
-                "value": ""
-              },
-              "use_curl": {
-                "_input_type": "BoolInput",
-                "advanced": false,
-                "display_name": "Use cURL",
-                "dynamic": false,
-                "info": "Enable cURL mode to populate fields from a cURL command.",
-                "list": false,
-                "list_add_label": "Add More",
-                "name": "use_curl",
-                "placeholder": "",
-                "real_time_refresh": true,
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "bool",
-                "value": false
+                "value": [
+                  "http://81.169.159.230:8081/legalcheck"
+                ]
               }
             },
             "tool_mode": false
@@ -7701,30 +7613,56 @@
           "type": "APIRequest"
         },
         "dragging": false,
-        "id": "APIRequest-pTfEJ",
+        "id": "APIRequest-k8Z9f",
         "measured": {
-          "height": 428,
+          "height": 411,
           "width": 320
         },
         "position": {
-          "x": 1070.0170102027853,
-          "y": -224.4533484958048
+          "x": 1135.5519715093865,
+          "y": -268.65134565607076
         },
         "selected": false,
         "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "note-pEFnz",
+          "node": {
+            "description": "# Do not change!\n\nThe API Request component below has altered code in order to make it work (because of [this bug in langflow](https://github.com/langflow-ai/langflow/issues/7382)).\n\nSo please do not delete it and swap it for a regular API Request component from the toolbox, because it won't work then.\n\n# ⬇︎",
+            "display_name": "",
+            "documentation": "",
+            "template": {
+              "backgroundColor": "transparent"
+            }
+          },
+          "type": "note"
+        },
+        "dragging": false,
+        "id": "note-pEFnz",
+        "measured": {
+          "height": 324,
+          "width": 324
+        },
+        "position": {
+          "x": 1167.0741917242963,
+          "y": -562.4952294408149
+        },
+        "selected": false,
+        "type": "noteNode"
       }
     ],
     "viewport": {
-      "x": -462.19974063246514,
-      "y": -3.2648303401491034,
-      "zoom": 0.2
+      "x": -7505.434483193481,
+      "y": -3174.840077625168,
+      "zoom": 1.0811981257142629
     }
   },
   "description": "Call me any time.",
   "endpoint_name": "GuardianAgents",
-  "id": "d3558a2a-e695-47a9-8be3-b66970cdcca9",
+  "id": "1a6591da-6170-4e2c-94a9-7f92cc5ff775",
   "is_component": false,
   "last_tested_version": "1.4.1",
-  "name": "GuardianAgents_with_Webhook_No_API_Keys",
+  "name": "GuardianAgents with Webhook",
   "tags": []
 }
