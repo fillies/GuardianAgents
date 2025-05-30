@@ -23,6 +23,7 @@ class AssertInput(BaseModel):
 
     class Config:
         fields = {'assert_': 'assert'}
+        populate_by_name = True
 
 
 class ModerationInput(BaseModel):
@@ -74,7 +75,7 @@ async def receive_new_rules(data: AssertInput):
     )
 
     print("📜 Received new rules update:")
-    print(f"Message ID: {message_id}")
+    #print(f"Message ID: {message_id}")
     print(f"Region: {region}")
     print("Rules:")
     for rule in rules:
