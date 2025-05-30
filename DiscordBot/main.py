@@ -17,6 +17,8 @@ from typing import List
 from typing import List, Dict
 import asyncio
 import nest_asyncio
+from typing import Optional, List, Dict
+from pydantic import BaseModel
 
 class AssertInput(BaseModel):
     assert_: List[str] = Field(alias="assert")  # ✅ Proper alias
@@ -28,14 +30,14 @@ class AssertInput(BaseModel):
 
 
 class ModerationResult(BaseModel):
-    message_id: str
-    location: str
-    legal_violation: Dict[str, List[str]]
-    laws_violated: List[str]
-    ethical_violations: List[str]
+    message_id: Optional[str] = None
+    location: Optional[str] = None
+    legal_violation: Optional[Dict[str, List[str]]] = None
+    laws_violated: Optional[List[str]] = None
+    ethical_violations: Optional[List[str]] = None
 
 class ModerationInput(BaseModel):
-    source: str
+    source: Optional[str] = None
     result: ModerationResult
 
 # Load environment variables
@@ -243,12 +245,12 @@ async def process_legal_violation(data):
     await client.wait_until_ready()
 
     message_id = data.get("message_id")
-    region = data.get("region", "Unknown")
+    region = data.get("location", "Unknown")
     legal_violation = data.get("legal_violation") or {}
     laws_violated = data.get("laws_violated") or []
 
     if not message_id:
-        print("⚠️ No message_id provided, cannot delete message.")
+        print("⚠️ No message_id provided. Cannot process.")
         return
 
     if not legal_violation:
@@ -261,10 +263,11 @@ async def process_legal_violation(data):
         await message.delete()
         print(f"🗑️ Deleted message {message_id} due to legal violations.")
 
-        violations = []
-        for category, details in legal_violation.items():
-            for item in details:
-                violations.append(f"{category.replace('_', ' ').title()}: {item.replace('_', ' ').title()}")
+        violations = [
+            f"{category.replace('_', ' ').title()}: {item.replace('_', ' ').title()}"
+            for category, items in legal_violation.items()
+            for item in items
+        ]
 
         law_text = "\n".join([f"🔹 {law}" for law in laws_violated])
         reasons = "\n".join([f"• {v}" for v in violations])
@@ -276,6 +279,10 @@ async def process_legal_violation(data):
         )
 
         await channel.send(warning_message)
+
+    except Exception as e:
+        print(f"❌ Failed to process legal violation: {e}")
+
 
     except Exception as e:
         print(f"❌ Failed to process legal violation: {e}")
