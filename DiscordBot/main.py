@@ -243,19 +243,20 @@ async def send_dm_to_admin(country, rules):
 async def process_legal_violation(data):
     await client.wait_until_ready()
 
-    print(f"📥 Received data: {data}")
-
     message_id = data.get("message_id")
     region = data.get("location", "Unknown")
     legal_violation = data.get("legal_violation") or {}
-    ethical_violation = data.get("ethical_violation") or {}
+    ethical_violations = data.get("ethical_violations") or []
     laws_violated = data.get("laws_violated") or []
 
+    print(f"📥 Received data: {data}")
+
     if not message_id:
-        print("⚠️ No message_id provided. Cannot process.")
+        print("⚠️ No message_id provided. Skipping processing.")
         return
 
-    if not legal_violation and not ethical_violation:
+    # If neither legal nor ethical violations are present, skip
+    if not legal_violation and not ethical_violations:
         print(f"✅ No legal or ethical violations. Message {message_id} not deleted.")
         return
 
@@ -263,20 +264,25 @@ async def process_legal_violation(data):
         channel = client.get_channel(CHAT_CHANNEL_ID)
         message = await channel.fetch_message(int(message_id))
         await message.delete()
-        print(f"🗑️ Deleted message {message_id} due to violations.")
+        print(f"🗑️ Deleted message {message_id} due to policy violations.")
 
-        violations = [
-            f"{category.replace('_', ' ').title()}: {item.replace('_', ' ').title()}"
-            for violation_group in (legal_violation, ethical_violation)
-            for category, items in violation_group.items()
-            for item in items
-        ]
+        # Build list of all violation strings
+        violations = []
 
-        law_text = "\n".join([f"🔹 {law}" for law in laws_violated]) if laws_violated else "🔹 None specified"
-        reasons = "\n".join([f"• {v}" for v in violations]) if violations else "• Unspecified violation"
+        for category, items in legal_violation.items():
+            for item in items:
+                violations.append(f"{category.replace('_', ' ').title()}: {item.replace('_', ' ').title()}")
 
+        for v in ethical_violations:
+            violations.append(f"Ethical Violation: {v.replace('_', ' ').title()}")
+
+        # Format violations and laws
+        reasons = "\n".join([f"• {v}" for v in violations])
+        law_text = "\n".join([f"🔹 {law}" for law in laws_violated]) if laws_violated else "None listed"
+
+        # Send warning message
         warning_message = (
-            f"🚨 A message was removed due to policy concerns in **{region.title()}**.\n"
+            f"🚨 A message was removed due to policy violations in **{region.title()}**.\n"
             f"**Violations:**\n{reasons}\n\n"
             f"**Laws Violated:**\n{law_text}"
         )
@@ -284,7 +290,7 @@ async def process_legal_violation(data):
         await channel.send(warning_message)
 
     except Exception as e:
-        print(f"❌ Failed to process violation: {e}")
+        print(f"❌ Failed to process legal violation: {e}")
 
 
 async def start_fastapi():
