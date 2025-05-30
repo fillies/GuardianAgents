@@ -38,7 +38,15 @@ USER_DATA_FILE = "user_data.json"
 
 app = FastAPI()
 
-
+@app.exception_handler(RequestValidationError)
+async def validation_exception_handler(request, exc):
+    print("Validation error!")
+    print(f"Request body: {exc.body}")
+    print(f"Validation errors: {exc.errors()}")
+    return JSONResponse(
+        status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+        content={"detail": exc.errors(), "body": exc.body},
+    )
 
 @app.post("/new-moderation-decision")
 async def receive_contetn_moderation(data: ModerationInput):
