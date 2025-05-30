@@ -17,10 +17,12 @@ from typing import List, Dict
 import asyncio
 import nest_asyncio
 
-class NewRulesInput(BaseModel):
-    message_id: str
-    region: str
-    rules: List[str]
+class AssertInput(BaseModel):
+    assert_: List[str]  # `assert` is a Python keyword, so use `alias`
+    location: str
+
+    class Config:
+        fields = {'assert_': 'assert'}
 
 
 class ModerationInput(BaseModel):
@@ -61,19 +63,21 @@ async def receive_contetn_moderation(data: ModerationInput):
 
 
 @app.post("/new-rules")
-async def receive_new_rules(data: NewRulesInput):
-    # Schedule send_dm_to_admin properly in the Discord event loop
-    print(data)
+async def receive_new_rules(data: AssertInput):
+    # message_id = "auto-generated-id"  # or extract from elsewhere if needed
+    region = data.location
+    rules = data.assert_
+
     asyncio.run_coroutine_threadsafe(
-        send_dm_to_admin(data.message_id, data.region, data.rules),
+        send_dm_to_admin(region, rules),
         client.loop
     )
 
     print("📜 Received new rules update:")
-    print(f"Message ID: {data.message_id}")
-    print(f"Region: {data.region}")
+    print(f"Message ID: {message_id}")
+    print(f"Region: {region}")
     print("Rules:")
-    for rule in data.rules:
+    for rule in rules:
         print(f" - {rule}")
 
     return {"status": "rules received and admin notified"}
@@ -196,7 +200,7 @@ async def on_message(message):
                 f"{member.mention}, please use the correct format: `Name: Jan, Country: Germany, Age: 10`"
             )
 
-async def send_dm_to_admin(message_id, country, rules):
+async def send_dm_to_admin(country, rules):
     await client.wait_until_ready()  # Ensure the bot is connected
     admin_id = int(os.getenv("DISCORD_ADMIN_ID"))
     admin_user = await client.fetch_user(admin_id)
@@ -205,10 +209,10 @@ async def send_dm_to_admin(message_id, country, rules):
         rule_text = "\n".join([f"- {r}" for r in rules])
         dm_message = (
             f"📢 **New Rules Received**\n"
-            f"**Message ID**: {message_id}\n"
             f"**Country**: {country}\n"
             f"**Rules:**\n{rule_text}"
         )
+        #f"**Message ID**: {message_id}\n"
         try:
             await admin_user.send(dm_message)
             print("✅ DM sent to admin.")
