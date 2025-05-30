@@ -42,6 +42,7 @@ app = FastAPI()
 
 @app.post("/new-moderation-decision")
 async def receive_contetn_moderation(data: ModerationInput):
+    print(data)
     asyncio.run_coroutine_threadsafe(
         process_legal_violation(data.model_dump()), client.loop
     )
@@ -51,6 +52,7 @@ async def receive_contetn_moderation(data: ModerationInput):
 @app.post("/new-rules")
 async def receive_new_rules(data: NewRulesInput):
     # Schedule send_dm_to_admin properly in the Discord event loop
+    print(data)
     asyncio.run_coroutine_threadsafe(
         send_dm_to_admin(data.message_id, data.region, data.rules),
         client.loop
