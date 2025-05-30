@@ -146,7 +146,7 @@ async def on_message(message):
 
         # ✅ Make the API call
         async with aiohttp.ClientSession() as session:
-            webhook_url = "http://81.169.159.230:7860/api/v1/webhook/1a6591da-6170-4e2c-94a9-7f92cc5ff775"
+            webhook_url = "http://81.169.159.230:7860/api/v1/webhook/f94b521d-39a8-4ccc-9976-279cede43fcf"
             payload = {
                 "message_id": message_id,
                 "location": country,
