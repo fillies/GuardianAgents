@@ -27,11 +27,16 @@ class AssertInput(BaseModel):
         populate_by_name = True
 
 
-class ModerationInput(BaseModel):
+class ModerationResult(BaseModel):
     message_id: str
-    region: str
+    location: str
     legal_violation: Dict[str, List[str]]
     laws_violated: List[str]
+    ethical_violations: List[str]
+
+class ModerationInput(BaseModel):
+    source: str
+    result: ModerationResult
 
 # Load environment variables
 load_dotenv()
@@ -57,9 +62,9 @@ async def validation_exception_handler(request, exc):
 
 @app.post("/new-moderation-decision")
 async def receive_contetn_moderation(data: ModerationInput):
-    print(data)
+    result_data = data.result.model_dump()
     asyncio.run_coroutine_threadsafe(
-        process_legal_violation(data.model_dump()), client.loop
+        process_legal_violation(result_data), client.loop
     )
     return {"status": "received"}
 
@@ -237,10 +242,14 @@ async def send_dm_to_admin(country, rules):
 async def process_legal_violation(data):
     await client.wait_until_ready()
 
-    message_id = int(data.get("message_id"))
+    message_id = data.get("message_id")
     region = data.get("region", "Unknown")
-    legal_violation = data.get("legal_violation", {})
-    laws_violated = data.get("laws_violated", [])
+    legal_violation = data.get("legal_violation") or {}
+    laws_violated = data.get("laws_violated") or []
+
+    if not message_id:
+        print("⚠️ No message_id provided, cannot delete message.")
+        return
 
     if not legal_violation:
         print(f"✅ No legal violations. Message {message_id} not deleted.")
@@ -248,11 +257,10 @@ async def process_legal_violation(data):
 
     try:
         channel = client.get_channel(CHAT_CHANNEL_ID)
-        message = await channel.fetch_message(message_id)
+        message = await channel.fetch_message(int(message_id))
         await message.delete()
         print(f"🗑️ Deleted message {message_id} due to legal violations.")
 
-        # Construct human-readable reason
         violations = []
         for category, details in legal_violation.items():
             for item in details:
