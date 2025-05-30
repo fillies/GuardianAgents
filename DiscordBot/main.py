@@ -240,40 +240,43 @@ async def send_dm_to_admin(country, rules):
     except Exception as e:
         print(f"❌ Failed to send DM to admin: {e}")
 
-
 async def process_legal_violation(data):
     await client.wait_until_ready()
+
+    print(f"📥 Received data: {data}")
 
     message_id = data.get("message_id")
     region = data.get("location", "Unknown")
     legal_violation = data.get("legal_violation") or {}
+    ethical_violation = data.get("ethical_violation") or {}
     laws_violated = data.get("laws_violated") or []
 
     if not message_id:
         print("⚠️ No message_id provided. Cannot process.")
         return
 
-    if not legal_violation:
-        print(f"✅ No legal violations. Message {message_id} not deleted.")
+    if not legal_violation and not ethical_violation:
+        print(f"✅ No legal or ethical violations. Message {message_id} not deleted.")
         return
 
     try:
         channel = client.get_channel(CHAT_CHANNEL_ID)
         message = await channel.fetch_message(int(message_id))
         await message.delete()
-        print(f"🗑️ Deleted message {message_id} due to legal violations.")
+        print(f"🗑️ Deleted message {message_id} due to violations.")
 
         violations = [
             f"{category.replace('_', ' ').title()}: {item.replace('_', ' ').title()}"
-            for category, items in legal_violation.items()
+            for violation_group in (legal_violation, ethical_violation)
+            for category, items in violation_group.items()
             for item in items
         ]
 
-        law_text = "\n".join([f"🔹 {law}" for law in laws_violated])
-        reasons = "\n".join([f"• {v}" for v in violations])
+        law_text = "\n".join([f"🔹 {law}" for law in laws_violated]) if laws_violated else "🔹 None specified"
+        reasons = "\n".join([f"• {v}" for v in violations]) if violations else "• Unspecified violation"
 
         warning_message = (
-            f"🚨 A message was removed due to legal concerns in **{region.title()}**.\n"
+            f"🚨 A message was removed due to policy concerns in **{region.title()}**.\n"
             f"**Violations:**\n{reasons}\n\n"
             f"**Laws Violated:**\n{law_text}"
         )
@@ -281,11 +284,7 @@ async def process_legal_violation(data):
         await channel.send(warning_message)
 
     except Exception as e:
-        print(f"❌ Failed to process legal violation: {e}")
-
-
-    except Exception as e:
-        print(f"❌ Failed to process legal violation: {e}")
+        print(f"❌ Failed to process violation: {e}")
 
 
 async def start_fastapi():
