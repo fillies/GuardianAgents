@@ -2,7 +2,7 @@
 
 Repository for the AgentX Competition at Berkeley RDI.
 
-The bot connects to the Discord server **GuardianAgentsDemo** ([join here](https://discord.gg/mM95jTty)) and manages new user onboarding. It also integrates with Langflow for moderation and rule generation (integration to be implemented in `on_message`).
+The bot connects to the Discord server **GuardianAgentsDemo** ([join here](https://discord.gg/9fSZJZSd)) and manages new user onboarding. It also integrates with Langflow for moderation and rule generation (integration to be implemented in `on_message`).
 
 ## ✨ Features
 
