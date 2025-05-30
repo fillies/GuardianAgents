@@ -12,17 +12,18 @@ from fastapi import BackgroundTasks
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 from fastapi import status
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
+from typing import List
 from typing import List, Dict
 import asyncio
 import nest_asyncio
 
 class AssertInput(BaseModel):
-    assert_: List[str]  # `assert` is a Python keyword, so use `alias`
+    assert_: List[str] = Field(alias="assert")  # ✅ Proper alias
     location: str
 
     class Config:
-        fields = {'assert_': 'assert'}
+        allow_population_by_field_name = True  # ✅ Critical for alias support
         populate_by_name = True
 
 
@@ -202,25 +203,36 @@ async def on_message(message):
             )
 
 async def send_dm_to_admin(country, rules):
-    await client.wait_until_ready()  # Ensure the bot is connected
+    await client.wait_until_ready()
     admin_id = int(os.getenv("DISCORD_ADMIN_ID"))
     admin_user = await client.fetch_user(admin_id)
 
-    if admin_user:
-        rule_text = "\n".join([f"- {r}" for r in rules])
-        dm_message = (
-            f"📢 **New Rules Received**\n"
-            f"**Country**: {country}\n"
-            f"**Rules:**\n{rule_text}"
-        )
-        #f"**Message ID**: {message_id}\n"
-        try:
-            await admin_user.send(dm_message)
-            print("✅ DM sent to admin.")
-        except Exception as e:
-            print(f"❌ Failed to send DM to admin: {e}")
-    else:
+    if not admin_user:
         print("❌ Admin user not found.")
+        return
+
+    header = f"📢 **New Rules Received**\n**Country**: {country}\n**Rules:**\n"
+    remaining_chars = 2000 - len(header)
+
+    # Construct rule list while checking length
+    rule_lines = []
+    current_length = 0
+
+    for rule in rules:
+        line = f"- {rule}\n"
+        if current_length + len(line) > remaining_chars:
+            break
+        rule_lines.append(line)
+        current_length += len(line)
+
+    full_message = header + ''.join(rule_lines)
+
+    try:
+        await admin_user.send(full_message)
+        print("✅ DM sent to admin.")
+    except Exception as e:
+        print(f"❌ Failed to send DM to admin: {e}")
+
 
 async def process_legal_violation(data):
     await client.wait_until_ready()
